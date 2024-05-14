@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tro/screens/culture.dart';
-import 'package:tro/screens/food.dart';
-import 'package:tro/screens/home.dart';
-import 'package:tro/screens/nature.dart';
+
+import 'package:tro/screens/sitetouristique/Culture/culture.dart' show CulturePage1;
+import 'package:tro/screens/sitetouristique/for_you/home.dart';
+import 'package:tro/screens/sitetouristique/Hotel/hotel.dart';
+import 'package:tro/screens/sitetouristique/Nature/nature.dart';
 import 'package:tro/screens/sport.dart';
 
-class HotelPage1 extends StatelessWidget {
+class FoodPage1 extends StatelessWidget {
  Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
@@ -383,20 +384,19 @@ Widget buildCategory5(String text) {
                       buildCategory0('For you', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => foru()));
                       }),
-                      buildCategory0('Culture', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => CulturePage1()));
+                       buildCategory0('Culture', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) =>CulturePage1()));
                       }),
-
                       buildCategory0('Sports', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => SportsPage1()));
                       }),
                       buildCategory0('Nature', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => NaturePage1()));
                       }),
-                      buildCategory1('Hotel'),
-                      buildCategory0('Food', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage1()));
+                      buildCategory0('Hotel', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HotelPage1()));
                       }),
+                      buildCategory1('Food'),
                     ],
                   ),
                 ),
@@ -998,5 +998,7 @@ Widget buildCategory5(String text) {
       ),
     );
   }
- }
+}
+
+
 

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
-//import 'package:tro/screens/culture.dart' show CulturePage1;
-import 'package:tro/screens/extradetail.dart';
+import 'package:tro/screens/sitetouristique/Culture/culture.dart';
+import 'package:tro/screens/sitetouristique/Resto/food.dart';
+import 'package:tro/screens/sitetouristique/Hotel/hotel.dart';
+import 'package:tro/screens/sitetouristique/Nature/nature.dart';
+import 'package:tro/screens/sport.dart';
 
 
-class DetailPage1 extends StatelessWidget {
 
-
- /*Widget buildCategory0(String categoryName, VoidCallback onPressed) {
+ class foru extends StatelessWidget {
+   Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -79,73 +80,50 @@ class DetailPage1 extends StatelessWidget {
     ),
   
     );
-  }*/
- Widget buildCategory1(String text) {
+  }
+  Widget buildCategory1(String text) {
     return Container(
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              child: Row(
-                children: [
-                  Text(
-                    text,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w900,
-                      height: 0.20,
-                      letterSpacing: 0.20,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+      width: 80,
+      height: 39.25,
+      margin: const EdgeInsets.only(right: 8),
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Color.fromARGB(255, 5, 5, 5),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(5),
+            topRight: Radius.circular(5),
+          ),
+        ),
+        shadows: [
+          BoxShadow(
+            color: Color.fromARGB(0, 0, 0, 0),
+            blurRadius: 3,
+            offset: Offset(0, 1),
+            spreadRadius: 0,
+          ),
+          BoxShadow(
+            color: Color.fromARGB(0, 0, 0, 0),
+            blurRadius: 8,
+            offset: Offset(0, 4),
+            spreadRadius: 3,
           ),
         ],
       ),
-    );
-  }
-
- 
-  Widget buildCategory2(String text) {
-    return Container(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             child: Container(
-              child: Row(
-                children: [
-                  Text(
-                    text,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w900,
-                      height: 0.20,
-                      letterSpacing: 0.20,
-                    ),
-                  ),
-                ],
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 16,
+                right: 20,
+                bottom: 16,
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
- 
-  Widget buildCategory3(String text) {
-    return Container(
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -155,8 +133,8 @@ class DetailPage1 extends StatelessWidget {
                     text,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      color: Color.fromARGB(255, 74, 73, 73),
-                      fontSize: 12,
+                      color: Colors.white,
+                      fontSize: 11,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w700,
                       height: 0.10,
@@ -172,6 +150,66 @@ class DetailPage1 extends StatelessWidget {
     );
   }
 
+  Widget buildCategory2(String text) {
+    return Container(
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              child: Row(
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w900,
+                      height: 0.20,
+                      letterSpacing: 0.20,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildCategory3(String text) {
+    return Container(
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w700,
+                      height: 0.10,
+                      letterSpacing: 0.10,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
  Widget buildCategory4(String text) {
   return Container(
@@ -233,18 +271,18 @@ class DetailPage1 extends StatelessWidget {
 
 Widget buildCategory5(String text) {
   return Container(
-    width: 120,
-    height: 33.25,
-    margin: const EdgeInsets.only(right: 4),
+    width: 100,
+    height: 38.25,
+    margin: const EdgeInsets.only(right: 8),
     clipBehavior: Clip.antiAlias,
     decoration: const ShapeDecoration(
       color: Color.fromARGB(255, 152, 22, 22),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(5),
-          topRight: Radius.circular(5),
-          bottomLeft: Radius.circular(5),
-          bottomRight: Radius.circular(5)
+          topLeft: Radius.circular(0),
+          topRight: Radius.circular(0),
+          bottomLeft: Radius.circular(11),
+          bottomRight: Radius.circular(11)
         ),
       ),
       
@@ -265,7 +303,7 @@ Widget buildCategory5(String text) {
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start, 
+              mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
@@ -273,7 +311,7 @@ Widget buildCategory5(String text) {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 10,
+                    fontSize: 12,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     height: 0.10,
@@ -289,39 +327,6 @@ Widget buildCategory5(String text) {
   );
 }
 
-  Widget buildCategory6(String text) {
-    return Container(
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    text,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 23, 85, 255),
-                      fontSize: 14,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w700,
-                      height: 0.10,
-                      letterSpacing: 0.10,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-
  Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -336,11 +341,14 @@ Widget buildCategory5(String text) {
                   child: Stack(
                     children: [
                       ClipRRect(
-                       
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          bottomRight: Radius.circular(30),
+                        ),
                         child: Image.asset(
                           'assets/caption.jpg',
                           fit: BoxFit.cover,
-                          height: MediaQuery.of(context).size.height * 0.5,
+                          height: MediaQuery.of(context).size.height * 0.6,
                           width: double.infinity,
                         ),
                       ),
@@ -352,7 +360,7 @@ Widget buildCategory5(String text) {
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 3.5,
+                    height: MediaQuery.of(context).size.height * 1.7,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 0, 0, 0),
                       borderRadius: BorderRadius.only(
@@ -363,10 +371,43 @@ Widget buildCategory5(String text) {
                 ),
               ],
             ),
-           Positioned(
+            Positioned(
               right: 0,
-              left: MediaQuery.of(context).size.width * 0.15- 45,
-              top: MediaQuery.of(context).size.height * 0.54 - 40,
+              left: MediaQuery.of(context).size.width * 0.15 - 45,
+              top: MediaQuery.of(context).size.height * 0.6 - 40,
+              child: Container(
+                width: 550,
+                height: 42.25,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory1('For you', ),
+                      buildCategory0('Culture', () {
+                        
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => CulturePage1()) );
+                      }),
+                      buildCategory0('Sports', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SportsPage1()));
+                      }),
+                      buildCategory0('Nature', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => NaturePage1()));
+                      }),
+                      buildCategory0('Hotel', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HotelPage1()));
+                      }),
+                      buildCategory0('Food', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage1()));
+                      }),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 0.22 - 40,
               child: Container(
                 width: 550,
                 height: 100,
@@ -374,7 +415,7 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory1('Alger: 360 vacation in Algeria you\n\n\n\n\n\n can see a lot of things in alger cen'),
+                      buildCategory2('Lets plan your next\n\n\n\n\n\n vacation in Algeria '),
                     ],
                   ),
                 ),
@@ -390,539 +431,8 @@ Widget buildCategory5(String text) {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
-                                        Text(
-                                          '4.9 ',
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                ),
-              ),
-            ),
-             Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 0.86 - 40,
-              child: Container(
-                width: 550,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
                     children: [
-                      buildCategory1('About this activity '),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.2 - 40,
-              child: Container(
-                width: 550,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory1('Experience'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-        Positioned(
-  right: 0,
-    left: MediaQuery.of(context).size.width * 0.138 - 45,
-              top: MediaQuery.of(context).size.height * 0.954 - 40,
-  child: GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => ExtradetailPage1() ),
-      );
-    },
-    child: Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
-      child: Container(
-        height: 600,
-        width: 200,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-        children: [
-          buildCategory2('Highlights'),
-          SizedBox(width: 287),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-)
-)),  
-     Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.33 - 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Full description'),
-          SizedBox(width: 260),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-           
-                  Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.4- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Includes'),
-          SizedBox(width: 300),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-           
-                 Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.48- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Meeting point'),
-          SizedBox(width: 270),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-             Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.58 - 40,
-              child: Container(
-                width: 550,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory1('Prepare for the activity'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.64- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('What to bring'),
-          SizedBox(width: 266),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-           
-                  Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.71- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Not allowed'),
-          SizedBox(width: 280),
-          Icon(Icons.flare_sharp, color: Color.fromARGB(255, 255, 171, 44)),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-           
-                 Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.79- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Know before you go'),
-          SizedBox(width: 240),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-            ),
-            
-            
-            
-            
-            
-             Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.42- 45,
-              top: MediaQuery.of(context).size.height * 1.9- 40,
-               child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-                      buildCategory1('Customer reviews '),
-                                             
-        ],
-      ),
-    ),
-  ),
-            ),
-
-                  Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.41- 45,
-              top: MediaQuery.of(context).size.height * 1.96- 40,
-               child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child:  Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 17),
-                                        Text(
-                                          '4.9 ',
-                                          style: TextStyle(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        
-                                      ],
-                                    ),
-    ),
-  ),
-            ),
-
-           
-Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.2- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),),
-                 
-                 
-                 
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-       Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.42- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),),
-                 
-                 
-                 
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-              
-           
-               Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.62- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                  Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),),
-                 
-                 
-                 
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-              
-                    Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.85- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),),
-                 
-                 
-                 
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-              
-            Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 0.78 - 40,
-              child: Container(
-                width: 550,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory2('Ejoy a memorable visit to the Museum when you''re \n\n\n\n\n\n\n\n in alger centre ou lba9i lirani nktbo khalota just hka'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
- //act
-            Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 0.64 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory3('Activity provider :'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-              Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 2.26 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory3('Friday, Appril 5, 2024'),
-                     
-                    ],
-                  ),
-                ),
-              ),
-            ),
-  Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 2.3 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                     
-                       Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 17),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-  //club
-            Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.43 - 45,
-              top: MediaQuery.of(context).size.height * 0.64 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory6('369 Alger Centre '),
+                      buildCategory2('Make your best\n\n\n\n\n experiences  '),
                     ],
                   ),
                 ),
@@ -930,8 +440,43 @@ Positioned(
             ),
              Positioned(
               right: 0,
-              left: MediaQuery.of(context).size.width * 0.16 - 45,
-              top: MediaQuery.of(context).size.height * 0.74 - 40,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 1.27 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Zoning In Algeria'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+             Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 1.82 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Best Willaya With\n\n\n\n\n These Activites'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+ //text
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 0.39 - 40,
               child: Container(
                 width: 550,
                 height: 50,
@@ -939,13 +484,30 @@ Positioned(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory6('369 Alger Centre '),
+                      buildCategory3('Immerse yourself in some of the world’s\n\n\n\n\n\n\n\n most historic Bardo National Museum on'),
                     ],
                   ),
                 ),
               ),
             ),
-
+  //learn 
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 0.46 - 40,
+              child: Container(
+                width: 550,
+                height: 50,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory3('Learn more '),
+                    ],
+                  ),
+                ),
+              ),
+            ),
  //search
             Positioned(
               right: 40,
@@ -988,7 +550,7 @@ Positioned(
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.12 - 45,
-              top: MediaQuery.of(context).size.height * 2.9- 40,
+              top: MediaQuery.of(context).size.height * 0.67- 40,
               child: Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
                 child: Container(
@@ -1216,10 +778,125 @@ Positioned(
                 ),
               ),
             ),
-          Positioned(
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.12 - 45,
+              top: MediaQuery.of(context).size.height * 1.58 - 40,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
+                child: Container(
+                  height: 200,
+                  width: 50,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 174,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        height: 174,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.12 - 45,
+              top: MediaQuery.of(context).size.height * 1.35 - 40,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
+                child: Container(
+                  height: 200,
+                  width: 50,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 174,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        height: 174,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.19 - 45,
-              top: MediaQuery.of(context).size.height * 0.5148 - 40,
+              top: MediaQuery.of(context).size.height * 1.392 - 40,
+              child: Container(
+                width: 550,
+                height: 50,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory4('YOYYBXJR'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.19 - 45,
+              top: MediaQuery.of(context).size.height * 1.429999 - 40,
               child: Container(
                 width: 550,
                 height: 50,
@@ -1233,143 +910,98 @@ Positioned(
                 ),
               ),
             ),
-              //PICC
-               Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.17 - 45,
-  top: MediaQuery.of(context).size.height * 2.378 - 40,
-  child: Container(
-    width: 600,
-    height: 60,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 25,
-            backgroundImage: AssetImage('assets/caption.jpg'),
-          ),
-        ],
-      ),
-    ),
-  ),
-),
-
-              //COMNTNM 
-                           Positioned(
+             Positioned(
               right: 0,
-             left: MediaQuery.of(context).size.width * 0.32- 45,
-  top: MediaQuery.of(context).size.height * 2.372 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Text(
-                      'Jessical-Alger',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+              left: MediaQuery.of(context).size.width * 0.12 - 45,
+              top: MediaQuery.of(context).size.height * 1.9 - 40,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
+                child: Container(
+                  height: 300,
+                  width: 130,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                        height: 300,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
                       ),
-                    ),
-
-                     
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-                Positioned(
-              right: 0,
-             left: MediaQuery.of(context).size.width * 0.32- 45,
-  top: MediaQuery.of(context).size.height * 2.396 - 40,
-              child: Container(
-                width: 550,
-                height: 50,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                     
-                      buildCategory3('Jessica@gmail.com'),
-                     
-                    ],
-                  ),
-                ),
-              ),
-            ),
- //CMNT
- Positioned(
-              right: 0,
-             left: MediaQuery.of(context).size.width * 0.15- 45,
-  top: MediaQuery.of(context).size.height * 2.465 - 40,
-              child: Container(
-                width: 900,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Text(
-                      'Metadata Library that allows you to display \n progress widgets based on percentage,\n can be Circular or Linear,\n you can also customize it to your needs.\n HomepageRepository report issues',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                      SizedBox(width: 20,),
+                      Container(
+                        height: 300,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
                       ),
-                    ),
-
-                     
-                    ],
-                  ),
+                        SizedBox(width: 20,),
+                      Container(
+                        height: 300,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                        SizedBox(width: 20,),
+                      Container(
+                        height: 300,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+           ] ),
                 ),
               ),
-            ),
-
-              Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.15- 45,
-  top: MediaQuery.of(context).size.height * 2.565- 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('See all reviews'),
-          SizedBox(width: 280),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-)
-, 
-
- Positioned(
-              right: 0,
-              left: MediaQuery.of(context).size.width * 0.15 - 45,
-              top: MediaQuery.of(context).size.height * 2.65 - 40,
-              child: Container(
-                width: 550,
-                height: 100,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategory1('You might also like '),
+             ),
+             ),
                     ],
-                  ),
-                ),
-              ),
-            ),
-  ],
         ),
       ),
     );
   }
+
 }
+
+ 
+

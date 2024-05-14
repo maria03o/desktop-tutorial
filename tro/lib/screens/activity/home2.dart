@@ -1,8 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-//import 'package:tro/screens/food.dart';
-//import 'package:tro/screens/home2.dart';
+
 class MyHome2Page extends StatefulWidget {
   final String title;
 

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tro/screens/culture.dart';
-import 'package:tro/screens/food.dart';
-import 'package:tro/screens/hotel.dart';
-import 'package:tro/screens/nature.dart';
+
+import 'package:tro/screens/sitetouristique/Culture/culture.dart';
+import 'package:tro/screens/sitetouristique/Resto/food.dart';
+import 'package:tro/screens/sitetouristique/for_you/home.dart';
+import 'package:tro/screens/sitetouristique/Nature/nature.dart';
 import 'package:tro/screens/sport.dart';
 
-
-
- class foru extends StatelessWidget {
-   Widget buildCategory0(String categoryName, VoidCallback onPressed) {
+class HotelPage1 extends StatelessWidget {
+ Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -210,6 +209,7 @@ import 'package:tro/screens/sport.dart';
     );
   }
 
+
  Widget buildCategory4(String text) {
   return Container(
     width: 150,
@@ -381,20 +381,20 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory1('For you', ),
-                      buildCategory0('Culture', () {
-                        
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => CulturePage1()) );
+                      buildCategory0('For you', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => foru()));
                       }),
+                      buildCategory0('Culture', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => CulturePage1()));
+                      }),
+
                       buildCategory0('Sports', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => SportsPage1()));
                       }),
                       buildCategory0('Nature', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => NaturePage1()));
                       }),
-                      buildCategory0('Hotel', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => HotelPage1()));
-                      }),
+                      buildCategory1('Hotel'),
                       buildCategory0('Food', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage1()));
                       }),
@@ -414,7 +414,7 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory2('Lets plan your next\n\n\n\n\n\n vacation in Algeria '),
+                      buildCategory2('Lets plan your next\n\n\n\n vacation in Algeria '),
                     ],
                   ),
                 ),
@@ -431,7 +431,7 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory2('Make your best\n\n\n\n\n experiences  '),
+                      buildCategory2('Make your best\n\n\n experiences  '),
                     ],
                   ),
                 ),
@@ -465,7 +465,7 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory2('Best Willaya With\n\n\n\n\n These Activites'),
+                      buildCategory2('Best Willaya With\n\n\nThese Activites'),
                     ],
                   ),
                 ),
@@ -483,7 +483,7 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory3('Immerse yourself in some of the world’s\n\n\n\n\n\n\n\n most historic Bardo National Museum on'),
+                      buildCategory3('Immerse yourself in some of the world’s\n\n\n\n\n\nmost historic Bardo National Museum on'),
                     ],
                   ),
                 ),
@@ -999,7 +999,5 @@ Widget buildCategory5(String text) {
       ),
     );
   }
-}
-
- 
+ }
 

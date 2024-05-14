@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tro/screens/detail.dart';
-import 'package:tro/screens/food.dart';
 
-import 'package:tro/screens/home.dart';
-import 'package:tro/screens/hotel.dart';
-import 'package:tro/screens/nature.dart';
+import 'package:tro/screens/sitetouristique/Culture/culture.dart';
+import 'package:tro/screens/sitetouristique/Resto/food.dart';
+
+import 'package:tro/screens/sitetouristique/for_you/home.dart';
+
+import 'package:tro/screens/sitetouristique/Hotel/hotel.dart';
 import 'package:tro/screens/sport.dart';
 
-
- class CulturePage1 extends StatelessWidget {
+ class NaturePage1 extends StatelessWidget {
    Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
@@ -81,7 +81,7 @@ import 'package:tro/screens/sport.dart';
   
     );
   }
-  Widget buildCategory1(String text, ) {
+  Widget buildCategory1(String text) {
     return Container(
       width: 80,
       height: 39.25,
@@ -327,8 +327,7 @@ Widget buildCategory5(String text) {
     ),
   );
 }
-
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
@@ -386,14 +385,14 @@ Widget buildCategory5(String text) {
                       buildCategory0('For you', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => foru()));
                       }),
-                     buildCategory1('Culture'),
+                     buildCategory0('Culture', () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => CulturePage1()));
+                      }),
 
                       buildCategory0('Sports', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => SportsPage1()));
                       }),
-                      buildCategory0('Nature', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => NaturePage1()));
-                      }),
+                      buildCategory1('Nature'),
                       buildCategory0('Hotel', () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => HotelPage1()));
                       }),
@@ -548,26 +547,19 @@ Widget buildCategory5(String text) {
               ),
             ),
   // SHEART
-           Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.12 - 45,
-  top: MediaQuery.of(context).size.height * 0.67 - 40,
-  child: GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => DetailPage1() ),
-      );
-    },
-    child: Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
-      child: Container(
-        height: 600,
-        width: 200,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.12 - 45,
+              top: MediaQuery.of(context).size.height * 0.67- 40,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
+                child: Container(
+                  height: 600,
+                  width: 200,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
                         Container(
                           height: 460,
                           width: 300, 
@@ -780,9 +772,13 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                         SizedBox(width: 30,),
-           ] ))) ))),
-             
-           Positioned(
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.12 - 45,
               top: MediaQuery.of(context).size.height * 1.58 - 40,
@@ -900,7 +896,7 @@ Widget buildCategory5(String text) {
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.19 - 45,
-              top: MediaQuery.of(context).size.height * 1.4 - 40,
+              top: MediaQuery.of(context).size.height * 1.429999 - 40,
               child: Container(
                 width: 550,
                 height: 50,
@@ -1002,10 +998,8 @@ Widget buildCategory5(String text) {
                     ],
         ),
       ),
-        );
-   
+    );
   }
 
 
 }
-

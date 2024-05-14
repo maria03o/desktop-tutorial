@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tro/screens/culture.dart';
-import 'package:tro/screens/food.dart';
-import 'package:tro/screens/home.dart';
-import 'package:tro/screens/hotel.dart';
-import 'package:tro/screens/nature.dart';
+
+import 'package:tro/screens/sitetouristique/Culture/culture.dart';
+import 'package:tro/screens/sitetouristique/Resto/food.dart';
+import 'package:tro/screens/sitetouristique/for_you/home.dart';
+import 'package:tro/screens/sitetouristique/Hotel/hotel.dart';
+import 'package:tro/screens/sitetouristique/Nature/nature.dart';
 
 
  class SportsPage1 extends StatelessWidget {
