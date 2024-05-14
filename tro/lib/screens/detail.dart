@@ -4,11 +4,8 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 //import 'package:tro/screens/culture.dart' show CulturePage1;
 import 'package:tro/screens/extradetail.dart';
 
-
 class DetailPage1 extends StatelessWidget {
-
-
- /*Widget buildCategory0(String categoryName, VoidCallback onPressed) {
+  /*Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -80,7 +77,7 @@ class DetailPage1 extends StatelessWidget {
   
     );
   }*/
- Widget buildCategory1(String text) {
+  Widget buildCategory1(String text) {
     return Container(
       child: Column(
         children: [
@@ -109,7 +106,6 @@ class DetailPage1 extends StatelessWidget {
     );
   }
 
- 
   Widget buildCategory2(String text) {
     return Container(
       child: Column(
@@ -139,7 +135,6 @@ class DetailPage1 extends StatelessWidget {
     );
   }
 
- 
   Widget buildCategory3(String text) {
     return Container(
       child: Column(
@@ -172,122 +167,117 @@ class DetailPage1 extends StatelessWidget {
     );
   }
 
-
- Widget buildCategory4(String text) {
-  return Container(
-    width: 150,
-    height: 38.25,
-    margin: const EdgeInsets.only(right: 8),
-    clipBehavior: Clip.antiAlias,
-    decoration: const ShapeDecoration(
-      color: Color.fromARGB(255, 5, 5, 5),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(11),
-          topRight: Radius.circular(11),
-          bottomLeft: Radius.circular(0),
-          bottomRight: Radius.circular(11)
+  Widget buildCategory4(String text) {
+    return Container(
+      width: 150,
+      height: 38.25,
+      margin: const EdgeInsets.only(right: 8),
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Color.fromARGB(255, 5, 5, 5),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(11),
+              topRight: Radius.circular(11),
+              bottomLeft: Radius.circular(0),
+              bottomRight: Radius.circular(11)),
         ),
       ),
-      
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.only(
-              top: 16,
-              left: 16,
-              right: 20,
-              bottom: 16,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w700,
-                    height: 0.10,
-                    letterSpacing: 0.10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 16,
+                right: 20,
+                bottom: 16,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w700,
+                      height: 0.10,
+                      letterSpacing: 0.10,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
-Widget buildCategory5(String text) {
-  return Container(
-    width: 120,
-    height: 33.25,
-    margin: const EdgeInsets.only(right: 4),
-    clipBehavior: Clip.antiAlias,
-    decoration: const ShapeDecoration(
-      color: Color.fromARGB(255, 152, 22, 22),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(5),
-          topRight: Radius.circular(5),
-          bottomLeft: Radius.circular(5),
-          bottomRight: Radius.circular(5)
+  Widget buildCategory5(String text) {
+    return Container(
+      width: 120,
+      height: 33.25,
+      margin: const EdgeInsets.only(right: 4),
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Color.fromARGB(255, 152, 22, 22),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(5),
+              topRight: Radius.circular(5),
+              bottomLeft: Radius.circular(5),
+              bottomRight: Radius.circular(5)),
         ),
       ),
-      
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.only(
-              top: 16,
-              left: 16,
-              right: 5,
-              bottom: 16,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start, 
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w700,
-                    height: 0.10,
-                    letterSpacing: 0.10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 16,
+                right: 5,
+                bottom: 16,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w700,
+                      height: 0.10,
+                      letterSpacing: 0.10,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
   Widget buildCategory6(String text) {
     return Container(
@@ -321,8 +311,7 @@ Widget buildCategory5(String text) {
     );
   }
 
-
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
@@ -336,7 +325,6 @@ Widget buildCategory5(String text) {
                   child: Stack(
                     children: [
                       ClipRRect(
-                       
                         child: Image.asset(
                           'assets/caption.jpg',
                           fit: BoxFit.cover,
@@ -363,9 +351,9 @@ Widget buildCategory5(String text) {
                 ),
               ],
             ),
-           Positioned(
+            Positioned(
               right: 0,
-              left: MediaQuery.of(context).size.width * 0.15- 45,
+              left: MediaQuery.of(context).size.width * 0.15 - 45,
               top: MediaQuery.of(context).size.height * 0.54 - 40,
               child: Container(
                 width: 550,
@@ -374,7 +362,8 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory1('Alger: 360 vacation in Algeria you\n\n\n\n\n\n can see a lot of things in alger cen'),
+                      buildCategory1(
+                          'Alger: 360 vacation in Algeria you\n\n\n\n\n\n can see a lot of things in alger cen'),
                     ],
                   ),
                 ),
@@ -390,30 +379,30 @@ Widget buildCategory5(String text) {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
-                                        Text(
-                                          '4.9 ',
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                    children: [
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Text(
+                        '4.9 ',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 0.86 - 40,
@@ -430,7 +419,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
-Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 1.2 - 40,
@@ -447,99 +436,100 @@ Positioned(
                 ),
               ),
             ),
-        Positioned(
-  right: 0,
-    left: MediaQuery.of(context).size.width * 0.138 - 45,
-              top: MediaQuery.of(context).size.height * 0.954 - 40,
-  child: GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => ExtradetailPage1() ),
-      );
-    },
-    child: Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
-      child: Container(
-        height: 600,
-        width: 200,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-        children: [
-          buildCategory2('Highlights'),
-          SizedBox(width: 287),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-)
-)),  
-     Positioned(
+            Positioned(
+                right: 0,
+                left: MediaQuery.of(context).size.width * 0.138 - 45,
+                top: MediaQuery.of(context).size.height * 0.954 - 40,
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ExtradetailPage1()),
+                      );
+                    },
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(top: 20.0, left: 18, right: 18),
+                      child: Container(
+                        height: 600,
+                        width: 200,
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              buildCategory2('Highlights'),
+                              SizedBox(width: 287),
+                              Icon(Icons.flare_sharp, color: Colors.orange),
+                              SizedBox(width: 5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ))),
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 1.33 - 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Full description'),
-          SizedBox(width: 260),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Full description'),
+                      SizedBox(width: 260),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-           
-                  Positioned(
+
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.4- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Includes'),
-          SizedBox(width: 300),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              top: MediaQuery.of(context).size.height * 1.4 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Includes'),
+                      SizedBox(width: 300),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-           
-                 Positioned(
+
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.48- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Meeting point'),
-          SizedBox(width: 270),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              top: MediaQuery.of(context).size.height * 1.48 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Meeting point'),
+                      SizedBox(width: 270),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 1.58 - 40,
@@ -559,277 +549,279 @@ Positioned(
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.64- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('What to bring'),
-          SizedBox(width: 266),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              top: MediaQuery.of(context).size.height * 1.64 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('What to bring'),
+                      SizedBox(width: 266),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-           
-                  Positioned(
+
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.71- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Not allowed'),
-          SizedBox(width: 280),
-          Icon(Icons.flare_sharp, color: Color.fromARGB(255, 255, 171, 44)),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              top: MediaQuery.of(context).size.height * 1.71 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Not allowed'),
+                      SizedBox(width: 280),
+                      Icon(Icons.flare_sharp,
+                          color: Color.fromARGB(255, 255, 171, 44)),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-           
-                 Positioned(
+
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
-              top: MediaQuery.of(context).size.height * 1.79- 40,
-             child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('Know before you go'),
-          SizedBox(width: 240),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
+              top: MediaQuery.of(context).size.height * 1.79 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('Know before you go'),
+                      SizedBox(width: 240),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
             ),
-            
-            
-            
-            
-            
-             Positioned(
+
+            Positioned(
               right: 0,
-              left: MediaQuery.of(context).size.width * 0.42- 45,
-              top: MediaQuery.of(context).size.height * 1.9- 40,
-               child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
+              left: MediaQuery.of(context).size.width * 0.42 - 45,
+              top: MediaQuery.of(context).size.height * 1.9 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
                       buildCategory1('Customer reviews '),
-                                             
-        ],
-      ),
-    ),
-  ),
+                    ],
+                  ),
+                ),
+              ),
             ),
 
-                  Positioned(
+            Positioned(
               right: 0,
-              left: MediaQuery.of(context).size.width * 0.41- 45,
-              top: MediaQuery.of(context).size.height * 1.96- 40,
-               child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child:  Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 17),
-                                        Text(
-                                          '4.9 ',
-                                          style: TextStyle(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        
-                                      ],
-                                    ),
-    ),
-  ),
-            ),
-
-           
-Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.2- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+              left: MediaQuery.of(context).size.width * 0.41 - 45,
+              top: MediaQuery.of(context).size.height * 1.96 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 17),
+                      Text(
+                        '4.9 ',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),),
-                 
-                 
-                 
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
 
-       Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.42- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.2 - 45,
+              top: MediaQuery.of(context).size.height * 2.1 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Guide',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                      SizedBox(height: 20),
+                      CircularPercentIndicator(
+                        radius: 60,
+                        lineWidth: 10,
+                        percent: 0.4,
+                        progressColor: Colors.amber,
+                        backgroundColor: Color.fromARGB(255, 105, 89, 1),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        center: Text(
+                          '4.8 ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                    ),),
-                 
-                 
-                 
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
 
-              
-           
-               Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.62- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                  Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.42 - 45,
+              top: MediaQuery.of(context).size.height * 2.1 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Guide',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                      SizedBox(height: 20),
+                      CircularPercentIndicator(
+                        radius: 60,
+                        lineWidth: 10,
+                        percent: 0.4,
+                        progressColor: Colors.amber,
+                        backgroundColor: Color.fromARGB(255, 105, 89, 1),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        center: Text(
+                          '4.8 ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                    ),),
-                 
-                 
-                 
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
 
-              
-                    Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.85- 45,
-  top: MediaQuery.of(context).size.height * 2.1 - 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Column(
-        children: [
-         
-                   Text(
-                      'Guide',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.62 - 45,
+              top: MediaQuery.of(context).size.height * 2.1 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Guide',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20),
-                  
-                CircularPercentIndicator(radius: 60,lineWidth: 10,percent: 0.4,progressColor: Colors.amber,backgroundColor: Color.fromARGB(255, 105, 89, 1),circularStrokeCap: CircularStrokeCap.round,center: Text(
-                      '4.8 ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                      SizedBox(height: 20),
+                      CircularPercentIndicator(
+                        radius: 60,
+                        lineWidth: 10,
+                        percent: 0.4,
+                        progressColor: Colors.amber,
+                        backgroundColor: Color.fromARGB(255, 105, 89, 1),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        center: Text(
+                          '4.8 ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                    ),),
-                 
-                 
-                 
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
 
-              
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.85 - 45,
+              top: MediaQuery.of(context).size.height * 2.1 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Guide',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      CircularPercentIndicator(
+                        radius: 60,
+                        lineWidth: 10,
+                        percent: 0.4,
+                        progressColor: Colors.amber,
+                        backgroundColor: Color.fromARGB(255, 105, 89, 1),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        center: Text(
+                          '4.8 ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -841,13 +833,15 @@ Positioned(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory2('Ejoy a memorable visit to the Museum when you''re \n\n\n\n\n\n\n\n in alger centre ou lba9i lirani nktbo khalota just hka'),
+                      buildCategory2(
+                          'Ejoy a memorable visit to the Museum when you'
+                          're \n\n\n\n\n\n\n\n in alger centre ou lba9i lirani nktbo khalota just hka'),
                     ],
                   ),
                 ),
               ),
             ),
- //act
+            //act
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -865,7 +859,7 @@ Positioned(
                 ),
               ),
             ),
-              Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 2.26 - 40,
@@ -877,13 +871,12 @@ Positioned(
                   child: Row(
                     children: [
                       buildCategory3('Friday, Appril 5, 2024'),
-                     
                     ],
                   ),
                 ),
               ),
             ),
-  Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 2.3 - 40,
@@ -894,23 +887,22 @@ Positioned(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                     
-                       Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 17),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 5),
+                      Icon(Icons.star, color: Colors.orange),
+                      SizedBox(width: 17),
                     ],
                   ),
                 ),
               ),
             ),
-  //club
+            //club
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.43 - 45,
@@ -928,7 +920,7 @@ Positioned(
                 ),
               ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.16 - 45,
               top: MediaQuery.of(context).size.height * 0.74 - 40,
@@ -946,7 +938,7 @@ Positioned(
               ),
             ),
 
- //search
+            //search
             Positioned(
               right: 40,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -984,11 +976,11 @@ Positioned(
                 ),
               ),
             ),
-  // SHEART
+            // SHEART
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.12 - 45,
-              top: MediaQuery.of(context).size.height * 2.9- 40,
+              top: MediaQuery.of(context).size.height * 2.9 - 40,
               child: Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
                 child: Container(
@@ -1000,7 +992,7 @@ Positioned(
                       children: [
                         Container(
                           height: 460,
-                          width: 300, 
+                          width: 300,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 0, 0, 0),
                             borderRadius: BorderRadius.only(
@@ -1010,8 +1002,8 @@ Positioned(
                               topRight: Radius.circular(30),
                             ),
                             border: Border.all(
-                              color: Color.fromARGB(255, 53, 52, 53), 
-                              width: 2.0, 
+                              color: Color.fromARGB(255, 53, 52, 53),
+                              width: 2.0,
                             ),
                           ),
                           child: Column(
@@ -1033,7 +1025,7 @@ Positioned(
                                     topRight: Radius.circular(30),
                                   ),
                                   child: Image(
-                                    fit: BoxFit.cover, 
+                                    fit: BoxFit.cover,
                                     image: AssetImage('assets/caption.jpg'),
                                   ),
                                 ),
@@ -1048,7 +1040,8 @@ Positioned(
                                     Text(
                                       'WATER ACTIVITY',
                                       style: TextStyle(
-                                        color: Color.fromARGB(255, 123, 125, 123),
+                                        color:
+                                            Color.fromARGB(255, 123, 125, 123),
                                         fontWeight: FontWeight.w900,
                                       ),
                                     ),
@@ -1056,7 +1049,8 @@ Positioned(
                                     Text(
                                       'Bordj El Behri : Architecture\nHour Guided',
                                       style: TextStyle(
-                                        color: Color.fromARGB(255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
                                       ),
@@ -1067,13 +1061,13 @@ Positioned(
                                         Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
+                                        SizedBox(width: 5),
+                                        Icon(Icons.star, color: Colors.orange),
+                                        SizedBox(width: 5),
                                         Text(
                                           '4.9   (2336)',
                                           style: TextStyle(
@@ -1092,7 +1086,8 @@ Positioned(
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 18,
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255),
                                           ),
                                         ),
                                       ],
@@ -1103,10 +1098,12 @@ Positioned(
                             ],
                           ),
                         ),
-                        SizedBox(width: 30,),
-                         Container(
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Container(
                           height: 460,
-                          width: 300, 
+                          width: 300,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 0, 0, 0),
                             borderRadius: BorderRadius.only(
@@ -1116,8 +1113,8 @@ Positioned(
                               topRight: Radius.circular(30),
                             ),
                             border: Border.all(
-                              color: Color.fromARGB(255, 53, 52, 53), 
-                              width: 2.0, 
+                              color: Color.fromARGB(255, 53, 52, 53),
+                              width: 2.0,
                             ),
                           ),
                           child: Column(
@@ -1139,7 +1136,7 @@ Positioned(
                                     topRight: Radius.circular(30),
                                   ),
                                   child: Image(
-                                    fit: BoxFit.cover, 
+                                    fit: BoxFit.cover,
                                     image: AssetImage('assets/caption.jpg'),
                                   ),
                                 ),
@@ -1154,7 +1151,8 @@ Positioned(
                                     Text(
                                       'WATER ACTIVITY',
                                       style: TextStyle(
-                                        color: Color.fromARGB(255, 123, 125, 123),
+                                        color:
+                                            Color.fromARGB(255, 123, 125, 123),
                                         fontWeight: FontWeight.w900,
                                       ),
                                     ),
@@ -1162,7 +1160,8 @@ Positioned(
                                     Text(
                                       'Bordj El Behri : Architecture\nHour Guided',
                                       style: TextStyle(
-                                        color: Color.fromARGB(255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
                                       ),
@@ -1173,13 +1172,13 @@ Positioned(
                                         Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
                                         SizedBox(width: 5),
                                         Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
+                                        SizedBox(width: 5),
+                                        Icon(Icons.star, color: Colors.orange),
+                                        SizedBox(width: 5),
                                         Text(
                                           '4.9   (2336)',
                                           style: TextStyle(
@@ -1198,7 +1197,8 @@ Positioned(
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 18,
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255),
                                           ),
                                         ),
                                       ],
@@ -1209,14 +1209,16 @@ Positioned(
                             ],
                           ),
                         ),
-                        SizedBox(width: 30,),
+                        SizedBox(
+                          width: 30,
+                        ),
                       ],
                     ),
                   ),
                 ),
               ),
             ),
-          Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.19 - 45,
               top: MediaQuery.of(context).size.height * 0.5148 - 40,
@@ -1233,33 +1235,33 @@ Positioned(
                 ),
               ),
             ),
-              //PICC
-               Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.17 - 45,
-  top: MediaQuery.of(context).size.height * 2.378 - 40,
-  child: Container(
-    width: 600,
-    height: 60,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 25,
-            backgroundImage: AssetImage('assets/caption.jpg'),
-          ),
-        ],
-      ),
-    ),
-  ),
-),
-
-              //COMNTNM 
-                           Positioned(
+            //PICC
+            Positioned(
               right: 0,
-             left: MediaQuery.of(context).size.width * 0.32- 45,
-  top: MediaQuery.of(context).size.height * 2.372 - 40,
+              left: MediaQuery.of(context).size.width * 0.17 - 45,
+              top: MediaQuery.of(context).size.height * 2.378 - 40,
+              child: Container(
+                width: 600,
+                height: 60,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage('assets/caption.jpg'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            //COMNTNM
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.32 - 45,
+              top: MediaQuery.of(context).size.height * 2.372 - 40,
               child: Container(
                 width: 550,
                 height: 50,
@@ -1268,24 +1270,22 @@ Positioned(
                   child: Row(
                     children: [
                       Text(
-                      'Jessical-Alger',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                        'Jessical-Alger',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-
-                     
                     ],
                   ),
                 ),
               ),
             ),
 
-                Positioned(
+            Positioned(
               right: 0,
-             left: MediaQuery.of(context).size.width * 0.32- 45,
-  top: MediaQuery.of(context).size.height * 2.396 - 40,
+              left: MediaQuery.of(context).size.width * 0.32 - 45,
+              top: MediaQuery.of(context).size.height * 2.396 - 40,
               child: Container(
                 width: 550,
                 height: 50,
@@ -1293,19 +1293,17 @@ Positioned(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                     
                       buildCategory3('Jessica@gmail.com'),
-                     
                     ],
                   ),
                 ),
               ),
             ),
- //CMNT
- Positioned(
+            //CMNT
+            Positioned(
               right: 0,
-             left: MediaQuery.of(context).size.width * 0.15- 45,
-  top: MediaQuery.of(context).size.height * 2.465 - 40,
+              left: MediaQuery.of(context).size.width * 0.15 - 45,
+              top: MediaQuery.of(context).size.height * 2.465 - 40,
               child: Container(
                 width: 900,
                 height: 100,
@@ -1314,43 +1312,40 @@ Positioned(
                   child: Row(
                     children: [
                       Text(
-                      'Metadata Library that allows you to display \n progress widgets based on percentage,\n can be Circular or Linear,\n you can also customize it to your needs.\n HomepageRepository report issues',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
+                        'Metadata Library that allows you to display \n progress widgets based on percentage,\n can be Circular or Linear,\n you can also customize it to your needs.\n HomepageRepository report issues',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-
-                     
                     ],
                   ),
                 ),
               ),
             ),
 
-              Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.15- 45,
-  top: MediaQuery.of(context).size.height * 2.565- 40,
-  child: Container(
-    width: 550,
-    height: 100,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          buildCategory2('See all reviews'),
-          SizedBox(width: 280),
-          Icon(Icons.flare_sharp, color: Colors.orange),
-          SizedBox(width: 5),
-        ],
-      ),
-    ),
-  ),
-)
-, 
+            Positioned(
+              right: 0,
+              left: MediaQuery.of(context).size.width * 0.15 - 45,
+              top: MediaQuery.of(context).size.height * 2.565 - 40,
+              child: Container(
+                width: 550,
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildCategory2('See all reviews'),
+                      SizedBox(width: 280),
+                      Icon(Icons.flare_sharp, color: Colors.orange),
+                      SizedBox(width: 5),
+                    ],
+                  ),
+                ),
+              ),
+            ),
 
- Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.15 - 45,
               top: MediaQuery.of(context).size.height * 2.65 - 40,
@@ -1367,7 +1362,7 @@ Positioned(
                 ),
               ),
             ),
-  ],
+          ],
         ),
       ),
     );

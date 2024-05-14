@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 import 'package:tro/screens/detail.dart';
 import 'package:tro/screens/food.dart';
 
@@ -7,81 +7,82 @@ import 'package:tro/screens/hotel.dart';
 import 'package:tro/screens/nature.dart';
 import 'package:tro/screens/sport.dart';
 
-
- class CulturePage1 extends StatelessWidget {
-   Widget buildCategory0(String categoryName, VoidCallback onPressed) {
+class CulturePage1 extends StatelessWidget {
+  Widget buildCategory0(String categoryName, VoidCallback onPressed) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-      width: 80,
-      height: 39.25,
-      margin: const EdgeInsets.only(right: 8),
-      clipBehavior: Clip.antiAlias,
-      decoration: const ShapeDecoration(
-        color: Color.fromARGB(0, 5, 5, 5),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(5),
-            topRight: Radius.circular(5),
-          ),
-        ),
-        shadows: [
-          BoxShadow(
-            color: Color.fromARGB(0, 0, 0, 0),
-            blurRadius: 3,
-            offset: Offset(0, 1),
-            spreadRadius: 0,
-          ),
-          BoxShadow(
-            color: Color.fromARGB(0, 0, 0, 0),
-            blurRadius: 8,
-            offset: Offset(0, 4),
-            spreadRadius: 3,
-          ),
-        ],
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(
-                top: 16,
-                left: 16,
-                right: 20,
-                bottom: 16,
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    categoryName,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w700,
-                      height: 0.10,
-                      letterSpacing: 0.10,
-                    ),
-                  ),
-                ],
-              ),
+        width: 80,
+        height: 39.25,
+        margin: const EdgeInsets.only(right: 8),
+        clipBehavior: Clip.antiAlias,
+        decoration: const ShapeDecoration(
+          color: Color.fromARGB(0, 5, 5, 5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(5),
+              topRight: Radius.circular(5),
             ),
           ),
-        ],
+          shadows: [
+            BoxShadow(
+              color: Color.fromARGB(0, 0, 0, 0),
+              blurRadius: 3,
+              offset: Offset(0, 1),
+              spreadRadius: 0,
+            ),
+            BoxShadow(
+              color: Color.fromARGB(0, 0, 0, 0),
+              blurRadius: 8,
+              offset: Offset(0, 4),
+              spreadRadius: 3,
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(
+                  top: 16,
+                  left: 16,
+                  right: 20,
+                  bottom: 16,
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      categoryName,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w700,
+                        height: 0.10,
+                        letterSpacing: 0.10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  
     );
   }
-  Widget buildCategory1(String text, ) {
+
+  Widget buildCategory1(
+    String text,
+  ) {
     return Container(
       width: 80,
       height: 39.25,
@@ -211,122 +212,117 @@ import 'package:tro/screens/sport.dart';
     );
   }
 
-
- Widget buildCategory4(String text) {
-  return Container(
-    width: 150,
-    height: 38.25,
-    margin: const EdgeInsets.only(right: 8),
-    clipBehavior: Clip.antiAlias,
-    decoration: const ShapeDecoration(
-      color: Color.fromARGB(255, 5, 5, 5),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(11),
-          topRight: Radius.circular(11),
-          bottomLeft: Radius.circular(0),
-          bottomRight: Radius.circular(11)
+  Widget buildCategory4(String text) {
+    return Container(
+      width: 150,
+      height: 38.25,
+      margin: const EdgeInsets.only(right: 8),
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Color.fromARGB(255, 5, 5, 5),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(11),
+              topRight: Radius.circular(11),
+              bottomLeft: Radius.circular(0),
+              bottomRight: Radius.circular(11)),
         ),
       ),
-      
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.only(
-              top: 16,
-              left: 16,
-              right: 20,
-              bottom: 16,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w700,
-                    height: 0.10,
-                    letterSpacing: 0.10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 16,
+                right: 20,
+                bottom: 16,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w700,
+                      height: 0.10,
+                      letterSpacing: 0.10,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
-Widget buildCategory5(String text) {
-  return Container(
-    width: 100,
-    height: 38.25,
-    margin: const EdgeInsets.only(right: 8),
-    clipBehavior: Clip.antiAlias,
-    decoration: const ShapeDecoration(
-      color: Color.fromARGB(255, 152, 22, 22),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(0),
-          topRight: Radius.circular(0),
-          bottomLeft: Radius.circular(11),
-          bottomRight: Radius.circular(11)
+  Widget buildCategory5(String text) {
+    return Container(
+      width: 100,
+      height: 38.25,
+      margin: const EdgeInsets.only(right: 8),
+      clipBehavior: Clip.antiAlias,
+      decoration: const ShapeDecoration(
+        color: Color.fromARGB(255, 152, 22, 22),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(0),
+              topRight: Radius.circular(0),
+              bottomLeft: Radius.circular(11),
+              bottomRight: Radius.circular(11)),
         ),
       ),
-      
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.only(
-              top: 16,
-              left: 16,
-              right: 5,
-              bottom: 16,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w700,
-                    height: 0.10,
-                    letterSpacing: 0.10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 16,
+                right: 5,
+                bottom: 16,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start, // Adjust this line
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w700,
+                      height: 0.10,
+                      letterSpacing: 0.10,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -384,21 +380,33 @@ Widget buildCategory5(String text) {
                   child: Row(
                     children: [
                       buildCategory0('For you', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => foru()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => foru()));
                       }),
-                     buildCategory1('Culture'),
-
+                      buildCategory1('Culture'),
                       buildCategory0('Sports', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SportsPage1()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SportsPage1()));
                       }),
                       buildCategory0('Nature', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => NaturePage1()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NaturePage1()));
                       }),
                       buildCategory0('Hotel', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => HotelPage1()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HotelPage1()));
                       }),
                       buildCategory0('Food', () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage1()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FoodPage1()));
                       }),
                     ],
                   ),
@@ -416,7 +424,8 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory2('Lets plan your next\n\n\n\n vacation in Algeria '),
+                      buildCategory2(
+                          'Lets plan your next\n\n\n\n vacation in Algeria '),
                     ],
                   ),
                 ),
@@ -439,7 +448,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 1.27 - 40,
@@ -456,7 +465,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
               top: MediaQuery.of(context).size.height * 1.82 - 40,
@@ -473,7 +482,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
- //text
+            //text
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -485,13 +494,14 @@ Widget buildCategory5(String text) {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      buildCategory3('Immerse yourself in some of the world’s\n\n\n\n\n\nmost historic Bardo National Museum on'),
+                      buildCategory3(
+                          'Immerse yourself in some of the world’s\n\n\n\n\n\nmost historic Bardo National Museum on'),
                     ],
                   ),
                 ),
               ),
             ),
-  //learn 
+            //learn
             Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -509,7 +519,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
- //search
+            //search
             Positioned(
               right: 40,
               left: MediaQuery.of(context).size.width * 0.17 - 45,
@@ -547,242 +557,272 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
-  // SHEART
-           Positioned(
-  right: 0,
-  left: MediaQuery.of(context).size.width * 0.12 - 45,
-  top: MediaQuery.of(context).size.height * 0.67 - 40,
-  child: GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => DetailPage1() ),
-      );
-    },
-    child: Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 18, right: 18),
-      child: Container(
-        height: 600,
-        width: 200,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-                        Container(
-                          height: 460,
-                          width: 300, 
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
-                            border: Border.all(
-                              color: Color.fromARGB(255, 53, 52, 53), 
-                              width: 2.0, 
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 240,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(30),
-                                    bottomRight: Radius.circular(30),
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
-                                  ),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
-                                  ),
-                                  child: Image(
-                                    fit: BoxFit.cover, 
-                                    image: AssetImage('assets/caption.jpg'),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'WATER ACTIVITY',
-                                      style: TextStyle(
-                                        color: Color.fromARGB(255, 123, 125, 123),
-                                        fontWeight: FontWeight.w900,
+            // SHEART
+            Positioned(
+                right: 0,
+                left: MediaQuery.of(context).size.width * 0.12 - 45,
+                top: MediaQuery.of(context).size.height * 0.67 - 40,
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailPage1()),
+                      );
+                    },
+                    child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 20.0, left: 18, right: 18),
+                        child: Container(
+                            height: 600,
+                            width: 200,
+                            child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(children: [
+                                  Container(
+                                    height: 460,
+                                    width: 300,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30),
+                                        topLeft: Radius.circular(30),
+                                        topRight: Radius.circular(30),
+                                      ),
+                                      border: Border.all(
+                                        color: Color.fromARGB(255, 53, 52, 53),
+                                        width: 2.0,
                                       ),
                                     ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      'Bordj El Behri : Architecture\nHour Guided',
-                                      style: TextStyle(
-                                        color: Color.fromARGB(255, 255, 255, 255),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                    SizedBox(height: 40),
-                                    Row(
+                                    child: Column(
                                       children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
-                                        Text(
-                                          '4.9   (2336)',
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.bold,
+                                        Container(
+                                          height: 240,
+                                          width: 300,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(30),
+                                              bottomRight: Radius.circular(30),
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                            child: Image(
+                                              fit: BoxFit.cover,
+                                              image: AssetImage(
+                                                  'assets/caption.jpg'),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 5),
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'WATER ACTIVITY',
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 123, 125, 123),
+                                                  fontWeight: FontWeight.w900,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5),
+                                              Text(
+                                                'Bordj El Behri : Architecture\nHour Guided',
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 255, 255, 255),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                              SizedBox(height: 40),
+                                              Row(
+                                                children: [
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                    '4.9   (2336)',
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(height: 10),
+                                              Row(
+                                                children: [
+                                                  SizedBox(width: 10),
+                                                  Text(
+                                                    'From \$12.00 per person',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 18,
+                                                      color: Color.fromARGB(
+                                                          255, 255, 255, 255),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: 10),
-                                        Text(
-                                          'From \$12.00 per person',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Color.fromARGB(255, 255, 255, 255),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 30,),
-                         Container(
-                          height: 460,
-                          width: 300, 
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
-                            ),
-                            border: Border.all(
-                              color: Color.fromARGB(255, 53, 52, 53), 
-                              width: 2.0, 
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 240,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(30),
-                                    bottomRight: Radius.circular(30),
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
                                   ),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
+                                  SizedBox(
+                                    width: 30,
                                   ),
-                                  child: Image(
-                                    fit: BoxFit.cover, 
-                                    image: AssetImage('assets/caption.jpg'),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'WATER ACTIVITY',
-                                      style: TextStyle(
-                                        color: Color.fromARGB(255, 123, 125, 123),
-                                        fontWeight: FontWeight.w900,
+                                  Container(
+                                    height: 460,
+                                    width: 300,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(30),
+                                        topLeft: Radius.circular(30),
+                                        topRight: Radius.circular(30),
+                                      ),
+                                      border: Border.all(
+                                        color: Color.fromARGB(255, 53, 52, 53),
+                                        width: 2.0,
                                       ),
                                     ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      'Bordj El Behri : Architecture\nHour Guided',
-                                      style: TextStyle(
-                                        color: Color.fromARGB(255, 255, 255, 255),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                    SizedBox(height: 40),
-                                    Row(
+                                    child: Column(
                                       children: [
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                       SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                        SizedBox(width: 5),
-                                        Icon(Icons.star, color: Colors.orange),
-                                         SizedBox(width: 5),
-                                        Text(
-                                          '4.9   (2336)',
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.bold,
+                                        Container(
+                                          height: 240,
+                                          width: 300,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(30),
+                                              bottomRight: Radius.circular(30),
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                            child: Image(
+                                              fit: BoxFit.cover,
+                                              image: AssetImage(
+                                                  'assets/caption.jpg'),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 5),
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'WATER ACTIVITY',
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 123, 125, 123),
+                                                  fontWeight: FontWeight.w900,
+                                                ),
+                                              ),
+                                              SizedBox(height: 5),
+                                              Text(
+                                                'Bordj El Behri : Architecture\nHour Guided',
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 255, 255, 255),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                              SizedBox(height: 40),
+                                              Row(
+                                                children: [
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Icon(Icons.star,
+                                                      color: Colors.orange),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                    '4.9   (2336)',
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(height: 10),
+                                              Row(
+                                                children: [
+                                                  SizedBox(width: 10),
+                                                  Text(
+                                                    'From \$12.00 per person',
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 18,
+                                                      color: Color.fromARGB(
+                                                          255, 255, 255, 255),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      children: [
-                                        SizedBox(width: 10),
-                                        Text(
-                                          'From \$12.00 per person',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Color.fromARGB(255, 255, 255, 255),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 30,),
-           ] ))) ))),
-             
-           Positioned(
+                                  ),
+                                  SizedBox(
+                                    width: 30,
+                                  ),
+                                ])))))),
+
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.12 - 45,
               top: MediaQuery.of(context).size.height * 1.58 - 40,
@@ -809,7 +849,9 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                       ),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 174,
                         width: 174,
@@ -858,7 +900,9 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                       ),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 174,
                         width: 174,
@@ -914,7 +958,7 @@ Widget buildCategory5(String text) {
                 ),
               ),
             ),
-             Positioned(
+            Positioned(
               right: 0,
               left: MediaQuery.of(context).size.width * 0.12 - 45,
               top: MediaQuery.of(context).size.height * 1.9 - 40,
@@ -925,25 +969,7 @@ Widget buildCategory5(String text) {
                   width: 130,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
-                        height: 300,
-                        width: 174,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30),
-                            bottomLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30),
-                          ),
-                          child: Image(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/caption.jpg'),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 20,),
+                    child: Row(children: [
                       Container(
                         height: 300,
                         width: 174,
@@ -960,7 +986,9 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                       ),
-                        SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 300,
                         width: 174,
@@ -977,7 +1005,9 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                       ),
-                        SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 300,
                         width: 174,
@@ -994,18 +1024,33 @@ Widget buildCategory5(String text) {
                           ),
                         ),
                       ),
-           ] ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        height: 300,
+                        width: 174,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/caption.jpg'),
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ),
                 ),
               ),
-             ),
-             ),
-                    ],
+            ),
+          ],
         ),
       ),
-        );
-   
+    );
   }
-
-
 }
-
