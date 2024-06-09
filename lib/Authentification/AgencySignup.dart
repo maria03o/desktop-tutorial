@@ -108,7 +108,7 @@ class _AgencySignupState extends State<AgencySignup> {
               SizedBox(
                 height: 25,
               ),
-             /* Padding(
+             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: TypeAheadField(
                     noItemsFoundBuilder: (context) => const SizedBox(
@@ -162,7 +162,7 @@ class _AgencySignupState extends State<AgencySignup> {
                             suggestion; // Update the text field with the selected suggestion
                       });
                     }),
-              ),*/
+              ),
               SizedBox(
                 height: 30,
               ),

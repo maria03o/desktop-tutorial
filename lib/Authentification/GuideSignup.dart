@@ -221,7 +221,7 @@ class _GuideSignup extends State<GuideSignup> {
         SizedBox(
           height: 25,
         ),
-       /* Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
@@ -272,7 +272,7 @@ class _GuideSignup extends State<GuideSignup> {
 
             ],
           ),
-        ),*/
+        ),
 
         const SizedBox(
           height: 25,

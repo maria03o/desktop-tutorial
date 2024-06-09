@@ -18,7 +18,7 @@ class _SearchFieldState extends State<SearchField> {
   @override
   Widget build(BuildContext context) {
     return
-    Scaffold();/* Padding(
+    Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         children: [
@@ -82,7 +82,7 @@ class _SearchFieldState extends State<SearchField> {
           ),
         ],
       ),
-    );*/
+    );
   }
 
   List<String> listOfThings(List<String> items, String query) {
