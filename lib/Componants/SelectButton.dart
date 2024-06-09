@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/SelectChip.dart';
+import 'package:tro/Componants/SelectChip.dart';
 
 import 'package:flutter/material.dart';
 // Ensure this is the correct import path

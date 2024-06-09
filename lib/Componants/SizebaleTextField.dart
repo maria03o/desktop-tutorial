@@ -1,6 +1,6 @@
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/textfiled.dart';
+import 'package:tro/Componants/textfiled.dart';
 
 class SizebaleTextfield extends StatefulWidget {
   SizebaleTextfield({

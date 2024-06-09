@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/My_Timeline.dart';
+import 'package:tro/Componants/My_Timeline.dart';
 
 class ActivityPageEight extends StatefulWidget {
   const ActivityPageEight({super.key});

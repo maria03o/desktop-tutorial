@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/Selectitem.dart';
-import 'package:tourism_application/constrants/Size.dart';
-import 'package:tourism_application/loginpage/signin.dart';
+import 'package:tro/Componants/Selectitem.dart';
+import 'package:tro/constants/Size.dart';
+import 'package:tro/Authentification/signin.dart';
 
 // i wanna make it look more like tiktok
 class SelectIntrests extends StatefulWidget {

@@ -4,13 +4,13 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:intl_phone_field/phone_number.dart';
 import 'package:link_text/link_text.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
-import 'package:tourism_application/Componants/List_Of_States.dart';
-import 'package:tourism_application/Componants/My_Timeline.dart';
-import 'package:tourism_application/Componants/Search.dart';
-import 'package:tourism_application/Componants/SelectButton.dart';
-import 'package:tourism_application/Componants/Text&Field.dart';
-import 'package:tourism_application/constrants/Size.dart';
-import 'package:tourism_application/loginpage/signin.dart';
+import 'package:tro/Componants/List_Of_States.dart';
+import 'package:tro/Componants/My_Timeline.dart';
+import 'package:tro/componants/Search.dart';
+import 'package:tro/Componants/SelectButton.dart';
+import 'package:tro/Componants/Text&Field.dart';
+import 'package:tro/constants/Size.dart';
+import 'package:tro/Authentification/signin.dart';
 
 class ActivityPageSix extends StatefulWidget {
   ActivityPageSix({super.key});

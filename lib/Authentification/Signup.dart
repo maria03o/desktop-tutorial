@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/CheckBox.dart';
-import 'package:tourism_application/Componants/SquaretTile.dart';
-import 'package:tourism_application/Componants/Passwordfield.dart';
-import 'package:tourism_application/loginpage/login.dart';
-import 'package:tourism_application/loginpage/signin.dart';
-import 'package:tourism_application/Componants/textfiled.dart';
+import 'package:tro/Componants/CheckBox.dart';
+import 'package:tro/Componants/SquaretTile.dart';
+import 'package:tro/Componants/Passwordfield.dart';
+import 'package:tro/Authentification/login.dart';
+import 'package:tro/Authentification/signin.dart';
+import 'package:tro/Componants/textfiled.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SignupPage extends StatelessWidget {

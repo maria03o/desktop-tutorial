@@ -1,9 +1,9 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:tourism_application/Componants/SizebaleTextField.dart';
-import 'package:tourism_application/Componants/textfiled.dart';
-import 'package:tourism_application/constrants/Size.dart';
+import 'package:tro/Componants/SizebaleTextField.dart';
+import 'package:tro/Componants/textfiled.dart';
+import 'package:tro/constants/Size.dart';
 
 class CreateActivity extends StatefulWidget {
   CreateActivity({super.key});

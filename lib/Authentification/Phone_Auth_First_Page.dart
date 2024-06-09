@@ -5,9 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:tourism_application/Componants/SquaretTile.dart';
-import 'package:tourism_application/constrants/Size.dart';
-import 'package:tourism_application/loginpage/signin.dart';
+import 'package:tro/Componants/SquaretTile.dart';
+import 'package:tro/constants/Size.dart';
+import 'package:tro/Authentification/signin.dart';
 import 'package:flutter/services.dart';
 
 class PhoneAuthPageOne extends ConsumerWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import 'package:tourism_application/Componants/My_Timeline.dart';
-import 'package:tourism_application/Componants/Selectitem.dart';
-import 'package:tourism_application/Create%20Activity/ActivityName.dart';
-import 'package:tourism_application/constrants/Size.dart';
-import 'package:tourism_application/loginpage/signin.dart';
+import 'package:tro/Componants/My_Timeline.dart';
+import 'package:tro/Componants/Selectitem.dart';
+import 'package:tro/Create Activity/ActivityName.dart';
+import 'package:tro/constants/Size.dart';
+import 'package:tro/Authentification/signin.dart';
 
 class ActivityCategory extends StatefulWidget {
   const ActivityCategory({super.key});

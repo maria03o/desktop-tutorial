@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:tourism_application/loginpage/login.dart';
+import 'package:tro/Authentification/login.dart';
 
 class LoginChoice extends StatelessWidget {
   const LoginChoice({super.key});

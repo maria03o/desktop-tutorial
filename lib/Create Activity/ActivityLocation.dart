@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:link_text/link_text.dart';
-import 'package:tourism_application/Componants/List_Of_States.dart';
-import 'package:tourism_application/Componants/My_Timeline.dart';
-import 'package:tourism_application/Componants/SizebaleTextField.dart';
-import 'package:tourism_application/Create%20Activity/ActivityCategory.dart';
-import 'package:tourism_application/constrants/Size.dart';
-import 'package:tourism_application/loginpage/signin.dart';
+import 'package:tro/Componants/List_Of_States.dart';
+import 'package:tro/Componants/My_Timeline.dart';
+import 'package:tro/Componants/SizebaleTextField.dart';
+import 'package:tro/Create%20Activity/ActivityCategory.dart';
+import 'package:tro/constants/Size.dart';
+import 'package:tro/Authentification/signin.dart';
 
 class ActivityLocation extends StatefulWidget {
   const ActivityLocation({super.key});
