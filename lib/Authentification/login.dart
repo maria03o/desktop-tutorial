@@ -13,7 +13,7 @@ class loginPage extends StatelessWidget {
 
   //controller for text
   final usernamecontroller = TextEditingController();
-
+ final  pwdcntrl = TextEditingController();
   // sigin methode
   void SgininMethod() {}
   @override
@@ -69,7 +69,7 @@ class loginPage extends StatelessWidget {
 
             //password textfield
 
-            PasswordField(),
+            PasswordField(passwordcntr: pwdcntrl),
 
             const SizedBox(height: 10),
             // forgot password button

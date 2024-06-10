@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {
-  final String hintText; // Add a named parameter for hint text
+  final String hintText; 
+  final TextEditingController passwordcntr ;// Add a named parameter for hint text
 
-  const PasswordField({
+  PasswordField({
     Key? key,
+    required this.passwordcntr,
     this.hintText = 'Enter your password', // Default hint text if not provided
   }) : super(key: key);
-
   @override
   State<StatefulWidget> createState() => _PasswordFieldState();
 }
@@ -21,6 +22,7 @@ class _PasswordFieldState extends State<PasswordField> {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 25.0),
       child: TextField(
+        controller: widget.passwordcntr,
         obscureText: visibleIcon ? true : false,
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.lock),

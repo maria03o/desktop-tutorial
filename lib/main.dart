@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tro/Authentification/Signup.dart';
 import 'package:tro/Authentification/login.dart';
 import 'package:tro/navigateur.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
        // colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 55, 91, 222)),
         useMaterial3: true,
       ),
-      home: loginPage()
+      home: SignupPage()
     );
   }
 }
