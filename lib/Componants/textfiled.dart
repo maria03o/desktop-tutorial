@@ -22,15 +22,15 @@ class textfiled extends StatelessWidget {
           hintText: hintext,
           enabledBorder: OutlineInputBorder(
             borderSide:
-                BorderSide(color: const Color.fromARGB(109, 255, 255, 255)),
+                BorderSide(color: Color.fromARGB(255, 184, 184, 184)),
             borderRadius: BorderRadius.circular(10.0), // Set borderRadius here
           ),
           focusedBorder: OutlineInputBorder(
             borderSide:
                 BorderSide(color: const Color.fromARGB(109, 255, 255, 255)),
-            borderRadius: BorderRadius.circular(10.0), // Set borderRadius here
+            borderRadius: BorderRadius.circular(12.0), // Set borderRadius here
           ),
-          fillColor: Colors.grey,
+          fillColor: const Color.fromARGB(255, 255, 255, 255),
           filled: true,
         ),
       ),

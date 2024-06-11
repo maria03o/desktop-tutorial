@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tro/Componants/CheckBox.dart';
 import 'package:tro/Componants/SquaretTile.dart';
 import 'package:tro/Componants/Passwordfield.dart';
-import 'package:tro/Authentification/login.dart';
+import 'package:tro/Authentification/loginOrsignup.dart';
 import 'package:tro/Authentification/signin.dart';
 import 'package:tro/Componants/textfiled.dart';
 import 'package:tro/modules/client.dart';
@@ -185,7 +185,7 @@ class _SignupPageState extends State<SignupPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => loginPage()),
+                            MaterialPageRoute(builder: (context) => loginOrsignup()),
                           );
                         },
                         child: Text(

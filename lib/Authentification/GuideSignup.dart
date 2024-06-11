@@ -9,7 +9,7 @@ import 'package:tro/Componants/SelectChip.dart';
 import 'package:tro/Componants/SquaretTile.dart';
 import 'package:tro/Componants/textfiled.dart';
 import 'package:tro/Authentification/LOginChoice.dart';
-import 'package:tro/Authentification/login.dart';
+import 'package:tro/Authentification/loginOrsignup.dart';
 import 'package:tro/Authentification/signin.dart';
 import 'package:image_picker/image_picker.dart';
 

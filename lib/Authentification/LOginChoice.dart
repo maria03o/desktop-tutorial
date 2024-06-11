@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:tro/Authentification/login.dart';
+import 'package:tro/Authentification/loginOrsignup.dart';
 
 class LoginChoice extends StatelessWidget {
   const LoginChoice({super.key});
@@ -37,7 +37,7 @@ class LoginChoice extends StatelessWidget {
                 imagepath:
                     "lib/photos/travel-agent-abstract-concept-vector-illustration-2G4ME4R-removebg-preview.png",
                 text: "             Log in as a Agency ",
-                route: MaterialPageRoute(builder: (context) => loginPage()),
+                route: MaterialPageRoute(builder: (context) =>  loginOrsignup()),
               ),
               SizedBox(
                 height: 25,
@@ -46,7 +46,7 @@ class LoginChoice extends StatelessWidget {
                 imagepath:
                     "lib/photos/1dfb2f7cfb76190864e718c9ce0f759c-removebg-preview.png",
                 text: "Log in as a Agency ",
-                route: MaterialPageRoute(builder: (context) => loginPage()),
+                route: MaterialPageRoute(builder: (context) => loginOrsignup()),
               ),
               SizedBox(
                 height: 25,
@@ -58,7 +58,7 @@ class LoginChoice extends StatelessWidget {
 
                 route: MaterialPageRoute(
                     builder: (context) =>
-                        loginPage()), // Corrected route builder
+                        loginOrsignup()), // Corrected route builder
               ),
               const SizedBox(
                 height: 50,
@@ -74,7 +74,7 @@ class LoginChoice extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => loginPage()),
+                          MaterialPageRoute(builder: (context) => loginOrsignup()),
                         );
                       },
                       child: Text(

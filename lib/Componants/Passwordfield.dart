@@ -14,7 +14,7 @@ class PasswordField extends StatefulWidget {
 }
 
 class _PasswordFieldState extends State<PasswordField> {
-  bool visibleIcon = false;
+  bool visibleIcon =  true;
   Icon passwordIcon = Icon(Icons.visibility_off);
 
   @override
@@ -39,17 +39,17 @@ class _PasswordFieldState extends State<PasswordField> {
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: const Color.fromARGB(109, 255, 255, 255),
+              color: Color.fromARGB(108, 230, 230, 230),
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: const Color.fromARGB(109, 255, 255, 255),
+              color: Color.fromARGB(108, 243, 243, 243),
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          fillColor: Colors.grey,
+          fillColor: const Color.fromARGB(255, 255, 255, 255),
           filled: true,
           hintText: widget.hintText, // Use the hint text from the widget
         ),
