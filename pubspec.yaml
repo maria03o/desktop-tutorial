@@ -58,6 +58,9 @@ dependencies:
   auto_size_text_field: ^2.2.3
   link_text: ^0.2.1
   multi_dropdown: ^2.1.4
+  introduction_screen: ^3.1.12
+  smooth_page_indicator: ^1.0.0
+  lottie: ^1.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
