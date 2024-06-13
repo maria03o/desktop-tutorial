@@ -94,7 +94,7 @@ class MultiSelectState extends State<MultiSelect> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.grey,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       title: Text(widget.Text),
       content: SingleChildScrollView(
         child: ListBody(

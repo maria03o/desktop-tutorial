@@ -8,7 +8,7 @@ class sigin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: onTap,
+         onTap: onTap,
         child: InkWell(
             child: Container(
                 padding: EdgeInsets.all(20),

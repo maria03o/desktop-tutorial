@@ -4,14 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:intl/intl.dart';
+import 'package:tro/Authentification/Signup.dart';
+import 'package:tro/Authentification/login.dart';
 import 'package:tro/Componants/List_Of_States.dart';
 import 'package:tro/Componants/SelectChip.dart';
+import 'package:tro/Componants/SizebaleTextField.dart';
 import 'package:tro/Componants/SquaretTile.dart';
 import 'package:tro/Componants/textfiled.dart';
 import 'package:tro/Authentification/LOginChoice.dart';
 import 'package:tro/Authentification/loginOrsignup.dart';
 import 'package:tro/Authentification/signin.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tro/constants/Size.dart';
 
 class GuideSignup extends StatefulWidget {
   const GuideSignup({super.key});
@@ -29,7 +33,12 @@ class _GuideSignup extends State<GuideSignup> {
   TextEditingController _controller = TextEditingController();
   FocusNode _Focusenode = FocusNode();
   TextEditingController Lastnamecontroller = TextEditingController();
+   bool isSelected = false;
+  bool ismen = false;
+  bool iswoemn = false;
 
+  final WhatDoYouDo = TextEditingController();
+ 
   void _openMultiSelect() async {
     final List<String> items = ["English", "Francais", "Italian", "Arabic"];
     final List<String>? results = await showDialog(
@@ -52,9 +61,22 @@ class _GuideSignup extends State<GuideSignup> {
   List<String> SelectedItems = [];
   @override
   Widget build(BuildContext context) {
+    bool isSelected = false;
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.black,
+       appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>    LoginChoice()),);
+          },
+
+        ),
+        title: Text("personnal informations"),),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
           child: SingleChildScrollView(
               child: Column(children: [
@@ -67,7 +89,7 @@ class _GuideSignup extends State<GuideSignup> {
             Text(
               "Fill in your informations",
               style: TextStyle(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 //font fam to add later
@@ -93,7 +115,7 @@ class _GuideSignup extends State<GuideSignup> {
             Text(
               "chose your spoken languages",
               style: TextStyle(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 //font fam to add later
@@ -106,7 +128,7 @@ class _GuideSignup extends State<GuideSignup> {
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white, backgroundColor: Colors.grey,
+            foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 255, 255, 255),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10), // Rounded corners
             ),
@@ -127,7 +149,7 @@ class _GuideSignup extends State<GuideSignup> {
         Wrap(
           children: selectedItems
               .map((item) => Chip(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                     label: Text(item),
                     onDeleted: () {
                       setState(() {
@@ -148,7 +170,7 @@ class _GuideSignup extends State<GuideSignup> {
             Text(
               "enter your birthdate ",
               style: TextStyle(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 //font fam to add later
@@ -168,17 +190,17 @@ class _GuideSignup extends State<GuideSignup> {
               hintText: " MM/DD/YYYY",
               enabledBorder: OutlineInputBorder(
                 borderSide:
-                    BorderSide(color: const Color.fromARGB(109, 255, 255, 255)),
+                    BorderSide(color: Color.fromARGB(108, 167, 165, 165),),
                 borderRadius:
                     BorderRadius.circular(10.0), // Set borderRadius here
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide:
-                    BorderSide(color: const Color.fromARGB(109, 255, 255, 255)),
+                    BorderSide(color: Color.fromARGB(108, 255, 255, 255)),
                 borderRadius:
                     BorderRadius.circular(10.0), // Set borderRadius here
               ),
-              fillColor: Colors.grey,
+              fillColor: const Color.fromARGB(255, 255, 255, 255),
               filled: true,
             ),
             // readOnly: true,
@@ -210,7 +232,7 @@ class _GuideSignup extends State<GuideSignup> {
             Text(
               "Where are you currently located ? ",
               style: TextStyle(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 //font fam to add later
@@ -249,17 +271,17 @@ class _GuideSignup extends State<GuideSignup> {
       prefixIcon: Icon(Icons.search),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: Color.fromARGB(109, 255, 255, 255),
+          color: Color.fromARGB(108, 167, 165, 165),
         ),
         borderRadius: BorderRadius.circular(10.0),
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          color: Color.fromARGB(109, 255, 255, 255),
+          color: Color.fromARGB(108, 179, 177, 177),
         ),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      fillColor: Colors.grey,
+      fillColor: const Color.fromARGB(255, 255, 255, 255),
       filled: true,
     ),
   ),
@@ -274,50 +296,206 @@ class _GuideSignup extends State<GuideSignup> {
           ),
         ),
 
-        const SizedBox(
-          height: 25,
-        ),
-        const SizedBox(
-          height: 25,
-        ),
-        Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Divider(
-                    thickness: 0.5,
-                    color: Colors.grey[400],
+        
+         
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    "choose your grnder  ",
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      //font fam to add later
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                width: 350,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isSelected = true;
+                      ismen = true;
+                      iswoemn = false;
+                    });
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: isSelected && ismen && !iswoemn
+                          ? Colors.blue // Change color when selected
+                          : Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                          color: isSelected && ismen && !iswoemn
+                              ? Colors.blue
+                              : Color.fromARGB(255, 255, 255, 255), // Change border color when selected
+                          width: 2), // Increase border width when selected
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 2,
+                          blurRadius: 4,
+                          offset:
+                              const Offset(0, 2), // shadow direction: bottom
+                        ),
+                        BoxShadow(
+                          color: Color.fromARGB(255, 187, 186, 186)
+                              .withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 4,
+                          offset: const Offset(0, -2), // shadow direction: top
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                            padding: const EdgeInsets.all(1),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset(
+                              "lib/photos/casual-life-3d-profile-picture-of-man-in-green-shirt-and-orange-hat.png",
+                              height: 60,
+                            )),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          " i am a man  ",
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                Text(
-                  'Or continue with ',
-                  style: TextStyle(
-                    color: Colors.grey,
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                width: 350,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isSelected = true;
+                      iswoemn = true;
+                      ismen = false;
+                    });
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: isSelected && iswoemn && !ismen
+                          ? Colors.blue // Change color when selected
+                          : Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                          color: isSelected && iswoemn && !ismen
+                              ? Colors.blue
+                              : Color.fromARGB(255, 255, 255, 255), // Change border color when selected
+                          width: 2), // Increase border width when selected
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 2,
+                          blurRadius: 4,
+                          offset:
+                              const Offset(0, 2), // shadow direction: bottom
+                        ),
+                        BoxShadow(
+                          color: Color.fromARGB(255, 172, 170, 170)
+                              .withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 4,
+                          offset: const Offset(0, -2), // shadow direction: top
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                            padding: const EdgeInsets.all(1),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Image.asset(
+                              "lib/photos/3d-casual-life-avatar-girl-with-hair.png",
+                              height: 60,
+                            )),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          " i am a Women ",
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                Expanded(
-                    child: Divider(
-                  thickness: 0.5,
-                  color: Colors.grey[400],
-                ))
-              ],
-            )),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    "What do you do ",
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      //font fam to add later
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    "Describe yourslef in less than 200 character  ",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 161, 158, 158)
+                          .withOpacity(0.7),
 
-        const SizedBox(
-          height: 25,
-        ),
-        //google and apple sign in
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SquareTile(imagepath: 'lib/photos/google.png'),
-            const SizedBox(width: 15),
-            SquareTile(
-                imagepath:
-                    'lib/photos/kisspng-apple-iphone-5af7d926427d25.7954913915261924222724.png')
-          ],
-        ),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      //font fam to add later
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 15,
+              ),
+               
+                  SizebaleTextfield(controller: WhatDoYouDo, sizefield:  1, max:  200, hintText:  "Describe what you do ", iconVisible:  false, iconOnPressed:  ()=>{}),
 
         //regester now
         const SizedBox(
@@ -325,17 +503,26 @@ class _GuideSignup extends State<GuideSignup> {
         ),
 
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(12),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               sigin(
-                onTap: siginmethod(),
-                btntext: "       Back       ",
+                onTap:()=>{
+                 
+                },
+                btntext: "         Back         ",
               ),
               sigin(
-                onTap: siginmethod(),
-                btntext: "continue",
+                onTap:  ()=>{
+                   
+            Navigator.pushNamed(
+              context,
+              '/pageOne',
+              arguments: '/pageTwo',
+            )
+                },
+                btntext: "      continue       ",
               ),
             ],
           ),
@@ -364,7 +551,19 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>     GuideSignup()),);
+          },
+
+        ),
+        title: Text("personnal informations"),),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: SingleChildScrollView(
           child: Column(
@@ -378,7 +577,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                   Text(
                     "Profile Details",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -405,7 +604,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                   Text(
                     "Tell us a bit about yourself ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -422,9 +621,9 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                     width: 30,
                   ),
                   Text(
-                    "choose your sex  ",
+                    "choose your grnder  ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -450,13 +649,12 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                     decoration: BoxDecoration(
                       color: isSelected && ismen && !iswoemn
                           ? Colors.blue // Change color when selected
-                          : const Color.fromARGB(255, 102, 100, 100),
+                          : Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                           color: isSelected && ismen && !iswoemn
                               ? Colors.blue
-                              : const Color.fromARGB(255, 135, 133,
-                                  133), // Change border color when selected
+                              : Color.fromARGB(255, 255, 255, 255), // Change border color when selected
                           width: 2), // Increase border width when selected
                       boxShadow: [
                         BoxShadow(
@@ -467,7 +665,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                               const Offset(0, 2), // shadow direction: bottom
                         ),
                         BoxShadow(
-                          color: const Color.fromARGB(255, 108, 106, 106)
+                          color: Color.fromARGB(255, 187, 186, 186)
                               .withOpacity(0.5),
                           spreadRadius: 2,
                           blurRadius: 4,
@@ -493,7 +691,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                         Text(
                           " i am a man  ",
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 16),
+                              color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                         )
                       ],
                     ),
@@ -518,13 +716,12 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                     decoration: BoxDecoration(
                       color: isSelected && iswoemn && !ismen
                           ? Colors.blue // Change color when selected
-                          : const Color.fromARGB(255, 102, 100, 100),
+                          : Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                           color: isSelected && iswoemn && !ismen
                               ? Colors.blue
-                              : const Color.fromARGB(255, 135, 133,
-                                  133), // Change border color when selected
+                              : Color.fromARGB(255, 255, 255, 255), // Change border color when selected
                           width: 2), // Increase border width when selected
                       boxShadow: [
                         BoxShadow(
@@ -535,7 +732,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                               const Offset(0, 2), // shadow direction: bottom
                         ),
                         BoxShadow(
-                          color: const Color.fromARGB(255, 108, 106, 106)
+                          color: Color.fromARGB(255, 172, 170, 170)
                               .withOpacity(0.5),
                           spreadRadius: 2,
                           blurRadius: 4,
@@ -561,7 +758,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                         Text(
                           " i am a Women ",
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 16),
+                              color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                         )
                       ],
                     ),
@@ -579,7 +776,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                   Text(
                     "What do you do ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -598,7 +795,7 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
                   Text(
                     "Describe yourslef in less than 200 character  ",
                     style: TextStyle(
-                      color: const Color.fromARGB(255, 239, 236, 236)
+                      color: Color.fromARGB(255, 0, 0, 0)
                           .withOpacity(0.7),
 
                       fontSize: 16,
@@ -611,10 +808,30 @@ class _GuideSingupPageTwoState extends State<GuideSingupPageTwo> {
               SizedBox(
                 height: 15,
               ),
-              textfiled(
-                  controller: WhatDoYouDo,
-                  hintext: "describe your experince  ",
-                  obscuretext: false),
+               
+                  SizebaleTextfield(controller: WhatDoYouDo, sizefield:  1, max:  200, hintText:  "Describe what you do ", iconVisible:  false, iconOnPressed:  ()=>{}),
+
+                   Padding(
+          padding: const EdgeInsets.all(12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              sigin(
+                onTap: siginmethod(),
+                btntext: "         Back         ",
+              ),
+              sigin(
+                onTap:  ()=>{
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>   Login()),
+                      )
+                },
+                btntext: "      continue       ",
+              ),
+            ],
+          ),
+        )
             ],
           ),
         )));

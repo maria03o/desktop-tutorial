@@ -51,7 +51,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                 children: [
                   GestureDetector(
                    onTap: () => {indecatorcntroler.jumpToPage( 3)},
-                    child: Text("Skip")),
+                    child: Text("Skip",style: TextStyle(fontWeight: FontWeight.bold),)),
                   SmoothPageIndicator(controller:indecatorcntroler, count:  4),
 
                   onlastpage 
@@ -61,16 +61,16 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                    Navigator.of(context).push(_createRoute());
                 },
                 child: Text(
-                  'DONE',
+                  'Done',
                   style: TextStyle(
-                    color: Colors.blue,
-                    decoration: TextDecoration.underline,
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                     
                   ),
                 ))
 
                   : GestureDetector(
                      onTap: () => {indecatorcntroler.nextPage(duration: const Duration(milliseconds: 100) , curve: Curves.easeIn),},
-                    child: Text("next"))  
+                    child: Text("next",style: TextStyle(fontWeight: FontWeight.bold)))  
                 ],
               ))
           ],

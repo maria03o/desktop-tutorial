@@ -22,7 +22,19 @@ class _AgencySignupState extends State<AgencySignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+       appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>    LoginChoice()),);
+          },
+
+        ),
+        title: Text(""),),
+      backgroundColor: const Color.fromARGB(255, 255, 252, 252),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -36,7 +48,7 @@ class _AgencySignupState extends State<AgencySignup> {
                   Text(
                     "Continue as an agency",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -55,7 +67,7 @@ class _AgencySignupState extends State<AgencySignup> {
                   Text(
                     'How many employees does your company have?',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -66,6 +78,10 @@ class _AgencySignupState extends State<AgencySignup> {
                 height: 20,
               ),
               ToggleButtons(
+                disabledBorderColor: Colors.white,
+                color: Colors.white,
+                focusColor: Colors.white,
+                selectedBorderColor: Colors.white,
                 children: [
                   togglebtn(
                     text: "  3-5  ",
@@ -75,10 +91,12 @@ class _AgencySignupState extends State<AgencySignup> {
                   togglebtn(text: "10-50", isSelected: isSelected[2]),
                 ],
                 isSelected: isSelected,
-                fillColor: Colors.transparent,
+                fillColor: Colors.white,
+                borderColor: Colors.white,
                 onPressed: (int index) {
                   setState(() {
                     for (int buttonIndex = 0;
+                    
                         buttonIndex < isSelected.length;
                         buttonIndex++) {
                       isSelected[buttonIndex] = (buttonIndex == index);
@@ -97,7 +115,7 @@ class _AgencySignupState extends State<AgencySignup> {
                   Text(
                     "Where is the company restrated ? ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -129,7 +147,7 @@ class _AgencySignupState extends State<AgencySignup> {
                       );
                     },
                     suggestionsBoxDecoration: const SuggestionsBoxDecoration(
-                        color: const Color.fromARGB(109, 255, 255, 255),
+                        color: Color.fromARGB(108, 136, 132, 132),
                         elevation: 4.0,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(10),
@@ -142,7 +160,7 @@ class _AgencySignupState extends State<AgencySignup> {
                         prefixIcon: Icon(Icons.search),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                              color: const Color.fromARGB(109, 255, 255, 255)),
+                              color: Color.fromARGB(108, 92, 92, 92)),
                           borderRadius: BorderRadius.circular(
                               10.0), // Set borderRadius here
                         ),
@@ -152,7 +170,7 @@ class _AgencySignupState extends State<AgencySignup> {
                           borderRadius: BorderRadius.circular(
                               10.0), // Set borderRadius here
                         ),
-                        fillColor: Colors.grey,
+                        fillColor: const Color.fromARGB(255, 255, 255, 255),
                         filled: true,
                       ),
                     ),
@@ -174,7 +192,7 @@ class _AgencySignupState extends State<AgencySignup> {
                   Text(
                     " enter  your agency's legal name  ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -200,7 +218,7 @@ class _AgencySignupState extends State<AgencySignup> {
                   Text(
                     " enter your agency website link  ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       //font fam to add later
@@ -218,67 +236,37 @@ class _AgencySignupState extends State<AgencySignup> {
               const SizedBox(
                 height: 25,
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                      Text(
-                        'Or continue with ',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                      Expanded(
-                          child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[400],
-                      ))
-                    ],
-                  )),
-
-              const SizedBox(
-                height: 25,
-              ),
-
-              //google and apple sign in
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SquareTile(imagepath: 'lib/photos/google.png'),
-                  const SizedBox(width: 15),
-                  SquareTile(
-                      imagepath:
-                          'lib/photos/kisspng-apple-iphone-5af7d926427d25.7954913915261924222724.png')
-                ],
-              ),
-
+               
               //regester now
               const SizedBox(
                 height: 25,
               ),
 
               Padding(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    sigin(
-                      onTap: siginmethod(),
-                      btntext: "       Back       ",
-                    ),
-                    sigin(
-                      onTap: siginmethod(),
-                      btntext: "create account",
-                    ),
-                  ],
-                ),
-              )
+          padding: const EdgeInsets.all(12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              sigin(
+                onTap:()=>{
+                 
+                },
+                btntext: "         Back         ",
+              ),
+              sigin(
+                onTap:  ()=>{
+                   
+            Navigator.pushNamed(
+              context,
+              '/pageOne',
+              arguments: '/pageFour',
+            )
+                },
+                btntext: "      continue       ",
+              ),
+            ],
+          ),
+        )
             ],
           ),
         ),
@@ -301,9 +289,10 @@ class togglebtn extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-          color: isSelected ? Colors.blue : Colors.grey[800],
+
+          color: isSelected ? Colors.blue : const Color.fromARGB(255, 163, 163, 163),
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.transparent),
+          border: Border.all(color: Colors.white),
         ),
         child: Row(
           children: [
@@ -312,10 +301,10 @@ class togglebtn extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(color: Colors.white, fontSize: 18.5),
+              style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 18.5),
             ),
             if (isSelected) // Add checkmark if the button is selected
-              Icon(Icons.check, color: Color.fromARGB(255, 120, 33, 33)),
+              Icon(Icons.check, color: Color.fromARGB(255, 0, 0, 0)),
           ],
         ),
       ),

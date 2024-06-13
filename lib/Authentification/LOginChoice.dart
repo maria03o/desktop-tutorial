@@ -1,6 +1,9 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:tro/Authentification/AgencySignup.dart';
+import 'package:tro/Authentification/GuideSignup.dart';
+import 'package:tro/Authentification/Signup.dart';
 import 'package:tro/Authentification/loginOrsignup.dart';
 
 class LoginChoice extends StatelessWidget {
@@ -9,82 +12,116 @@ class LoginChoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-        backgroundColor: Colors.black,
-        body: SafeArea(
-          child: Column(
-            children: [
-              SizedBox(height: 50),
-              Text(
-                "Log in As :",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                ),
-              ),
-              SizedBox(height: 15),
-              Text(
-                "Choose your Account type",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              ChoiceBtn(
-                imagepath:
-                    "lib/photos/travel-agent-abstract-concept-vector-illustration-2G4ME4R-removebg-preview.png",
-                text: "             Log in as a Agency ",
-                route: MaterialPageRoute(builder: (context) =>  loginOrsignup()),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              ChoiceBtn(
-                imagepath:
-                    "lib/photos/1dfb2f7cfb76190864e718c9ce0f759c-removebg-preview.png",
-                text: "Log in as a Agency ",
-                route: MaterialPageRoute(builder: (context) => loginOrsignup()),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              ChoiceBtn(
-                imagepath:
-                    "lib/photos/Girl-Traveling-Illustration-1-removebg-preview.png",
-                text: 'Navigate to Page A',
+    return Scaffold( 
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>    loginOrsignup()),);
+          },
+        ),
+      ),
 
-                route: MaterialPageRoute(
-                    builder: (context) =>
-                        loginOrsignup()), // Corrected route builder
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child:  SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 50),
+                Text(
+              'signup To ZorDzair',
+              style: TextStyle(
+                color: const Color.fromARGB(255, 0, 0, 0),
+                fontSize: 32,
+                fontWeight: FontWeight.bold
               ),
-              const SizedBox(
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Have an account  ? ",
-                    style: TextStyle(color: Colors.white),
+            ),
+
+            const SizedBox(
+              height: 4,
+            ),
+            SizedBox(
+             width: 350,
+                 child: Text(
+                  'Choose an option below to sign up',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 16,
                   ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => loginOrsignup()),
-                        );
-                      },
-                      child: Text(
-                        "Log in  ",
-                        style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
-                      ))
-                ],
-              )
-            ],
+                               ),
+               ),
+                SizedBox(
+                  height: 50,
+                ),
+                  
+                          
+                ChoiceBtn(
+                  imagepath:
+                      "lib/photos/travel-agent-abstract-concept-vector-illustration-2G4ME4R-removebg-preview.png",
+                  text: " Signup as a Travel Agency ",
+                  route: MaterialPageRoute(builder: (context) =>   AgencySignup()),
+                ),
+                 SizedBox(
+                    width: 310,
+                    child: Text("Manage your tours, reach a broader audience, and grow your business.",style: TextStyle(fontSize: 12,color: Colors.grey), )),
+                SizedBox(
+                  height: 25,
+                ),
+                ChoiceBtn(
+                  imagepath:
+                      "lib/photos/1dfb2f7cfb76190864e718c9ce0f759c-removebg-preview.png",
+                  text: "Signup as a Guide ",
+                  route: MaterialPageRoute(builder: (context) =>  GuideSignup()),
+                ),
+                 SizedBox(
+                    width: 310,
+                    child: Text("Offer your services, connect with travelers, and share your expertise.",style: TextStyle(fontSize: 12,color: Colors.grey), )),
+                SizedBox(
+                  height: 25,
+                ),
+                ChoiceBtn(
+                  imagepath:
+                      "lib/photos/Girl-Traveling-Illustration-1-removebg-preview.png",
+                  text: 'Signup as a Client',
+            
+                  route: MaterialPageRoute(
+                      builder: (context) =>
+                           SignupPage(),
+                             settings: RouteSettings(arguments: '/pageThree'),), // Corrected route builder
+                ),
+                 SizedBox(
+                    width: 310,
+                    child: Text("Explore Algeria, book tours, and enjoy personalized travel experiences.",style: TextStyle(fontSize: 12,color: Colors.grey), )),
+                const SizedBox(
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Have an account  ? ",
+                      style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => loginOrsignup()),
+                          );
+                        },
+                        child: Text(
+                          "Log in  ",
+                          style: TextStyle(
+                              color: Colors.blue, fontWeight: FontWeight.bold),
+                        ))
+                  ],
+                )
+              ],
+            ),
           ),
         ));
   }
@@ -122,11 +159,11 @@ class _ChoiceBtnState extends State<ChoiceBtn> {
           Navigator.of(context).push(widget.route);
         },
         child: Container(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(1),
           decoration: BoxDecoration(
             color: isSelected
                 ? Colors.blue // Change color when selected
-                : const Color.fromARGB(255, 102, 100, 100),
+                : Color.fromARGB(255, 255, 255, 255),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
                 color: isSelected
@@ -134,21 +171,7 @@ class _ChoiceBtnState extends State<ChoiceBtn> {
                     : const Color.fromARGB(255, 135, 133,
                         133), // Change border color when selected
                 width: 2), // Increase border width when selected
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                spreadRadius: 2,
-                blurRadius: 4,
-                offset: const Offset(0, 2), // shadow direction: bottom
-              ),
-              BoxShadow(
-                color:
-                    const Color.fromARGB(255, 108, 106, 106).withOpacity(0.5),
-                spreadRadius: 2,
-                blurRadius: 4,
-                offset: const Offset(0, -2), // shadow direction: top
-              ),
-            ],
+            
           ),
           child: Row(
             children: [
@@ -166,7 +189,7 @@ class _ChoiceBtnState extends State<ChoiceBtn> {
               ),
               Text(
                 widget.text,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
               )
             ],
           ),

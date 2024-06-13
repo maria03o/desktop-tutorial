@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tro/screens/Profil/Noprofilescreen.dart';
 import 'package:tro/screens/Profil/profile_screen.dart';
 import 'package:tro/screens/activity/home2.dart';
 import 'package:tro/screens/map/mapfile.dart';
@@ -107,7 +108,7 @@ class _HomeWrapperState extends State<HomeWrapper> {
               return CupertinoTabView(
                 builder: (context) {
                   return CupertinoPageScaffold(
-                    child: ProfileScreen(),
+                    child:    NoProfile(),
                   );
                 },
               );

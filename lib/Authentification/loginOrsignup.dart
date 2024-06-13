@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:tro/Authentification/LOginChoice.dart';
+import 'package:tro/Authentification/login.dart';
 import 'package:tro/Componants/SquaretTile.dart';
 import 'package:tro/Componants/Passwordfield.dart';
 import 'package:tro/Authentification/Signup.dart';
@@ -86,10 +88,10 @@ class _loginOrsignupState extends State<loginOrsignup> {
                   height: 60,
                   child: GestureDetector(
                     onTap: () {
-                      setState(() {
-                        isSelected = true;
-                       
-                      });
+                       Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  Login()),
+                          );
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
@@ -116,6 +118,8 @@ class _loginOrsignupState extends State<loginOrsignup> {
                             style: const TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                           )
+
+                          
                         ],
                       ),
                     ),
@@ -310,7 +314,7 @@ class _loginOrsignupState extends State<loginOrsignup> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignupPage()),
+                        MaterialPageRoute(builder: (context) => LoginChoice()),
                       );
                     },
                     child: Text(
@@ -324,3 +328,65 @@ class _loginOrsignupState extends State<loginOrsignup> {
         )))));
   }
 }
+
+/*import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+class loginOrsignup extends StatefulWidget {
+  @override
+  _loginOrsignupState createState() => _loginOrsignupState();
+}
+
+class _loginOrsignupState extends State<loginOrsignup> {
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+
+  Future<void> _handleGoogleSignIn() async {
+    try {
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      if (googleUser != null) {
+        final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+        final String? idToken = googleAuth.idToken;
+
+        final response = await http.post(
+          Uri.parse('http://127.0.0.1:8000/api/google-login/'),
+          headers: <String, String>{
+            'Content-Type': 'application/json',
+          },
+          body: jsonEncode(<String, String>{
+            'id_token': idToken!,
+          }),
+        );
+
+        if (response.statusCode == 200) {
+          final Map<String, dynamic> data = jsonDecode(response.body);
+          String suggestedName = data['suggested_name'];
+          print('Suggested Name: $suggestedName');
+          // Use the suggested name or navigate to the next screen
+        } else {
+          print('Failed to sign in');
+        }
+      }
+    } catch (error) {
+      print('Error signing in with Google: $error');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Login or Signup'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: _handleGoogleSignIn,
+          child: Text('Sign in with Google'),
+        ),
+      ),
+    );
+  }
+}
+
+void main() => runApp(MaterialApp(home: loginOrsignup()));*/

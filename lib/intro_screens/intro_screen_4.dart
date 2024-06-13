@@ -13,7 +13,7 @@ class Intropage4 extends StatelessWidget {
        child: Center(
          child: Column(
           children: [
-
+             
             gapH32,
              SizedBox(
               height:350,
@@ -28,6 +28,7 @@ class Intropage4 extends StatelessWidget {
                 ),
               ),
               gapH32,
+             
                SizedBox(
                 width: 350,
                  child: Text(
