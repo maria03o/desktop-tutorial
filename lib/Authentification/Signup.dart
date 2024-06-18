@@ -1,4 +1,6 @@
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:tro/Authentification/LOginChoice.dart';
 import 'package:tro/Componants/CheckBox.dart';
@@ -9,6 +11,7 @@ import 'package:tro/Authentification/signin.dart';
 import 'package:tro/Componants/textfiled.dart';
 import 'package:tro/constants/Size.dart';
 import 'package:tro/modules/client.dart';
+//import 'package:tro/modules/User.dart';
 import 'package:tro/navigateur.dart';
 import 'package:tro/services/Authservice.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,15 +34,26 @@ class _SignupPageState extends State<SignupPage> {
   final pwdcntr2 = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _phoneNumberController = TextEditingController();
+ 
   bool _isEmailValid = true;
   bool _isPasswordValid = true;
-  bool visibleIcon =  true;
-  Icon passwordIcon = Icon(Icons.visibility_off);
+  bool _isEmailNotUsed = false ; 
+  bool visibleIcon1 =  true;
+  bool visibleIcon2 =  true;
+  bool _isLastNameValid = true;
+  Icon passwordIcon1 = Icon(Icons.visibility_off);
+  Icon passwordIcon2 = Icon(Icons.visibility_off);
+  String passworderror1 = "must be 8 char plus numbers and special char ";
+  String finrstnameerror = "please fill in this field";
+  String lastnameerror = "please fill in this field";
+  String emailerror = "invalide email ";
+ String passworderror2 = "password dont match ";
    final FocusNode _focusNode = FocusNode();
   bool _isFirstNameValid = true;
 
 
-  final _authService = AuthService();
+  //final _authService = AuthService();
  bool isSelected = false;
   final Uri privacyPolicyUrl = Uri.parse("https://pub.dev/packages/url_launcher/install");
 
@@ -58,6 +72,9 @@ class _SignupPageState extends State<SignupPage> {
         // When the TextField loses focus, validate the content
         setState(() {
           _isFirstNameValid = firstnamecntr.text.isNotEmpty;
+            lastnamecntr.text.isEmpty? _isLastNameValid =  false :_isLastNameValid = true;
+
+
         });
       }
     });
@@ -74,7 +91,7 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
        final RouteSettings settings = ModalRoute.of(context)!.settings;
     final String fromPage = settings.arguments as String;
-
+     _phoneNumberController.text = "1234"; 
     return Scaffold(
        appBar: AppBar(
         backgroundColor: Colors.white,
@@ -129,11 +146,13 @@ class _SignupPageState extends State<SignupPage> {
                        SizedBox(
                         width: 120,
                         child: TextField(
-                         
+                         onTap: ()=>{setState(() {
+                             _isFirstNameValid = true;
+                         },)},
                           cursorColor: Colors.black,
                           controller: firstnamecntr,decoration: InputDecoration(labelText: 'first name  ',
                           labelStyle: TextStyle(color:Colors.black),
-                           errorText: _isFirstNameValid ? null : 'Please fill in this field',
+                           errorText: _isFirstNameValid ? null : finrstnameerror,
                       
                         //  errorText: firstnamecntr.text.isNotEmpty ?null : 'please fill in ',
                         
@@ -165,9 +184,13 @@ class _SignupPageState extends State<SignupPage> {
                           
                         width: 120,
                         child: TextField(
+                          onTap: ()=>{setState(() {
+                            _isLastNameValid = true;
+                          },)},
                           cursorColor: Colors.black,
                           controller:  lastnamecntr,decoration: InputDecoration(labelText: 'last name ',
                             labelStyle: TextStyle(color:Colors.black),
+                               errorText: _isLastNameValid ? null :  lastnameerror,
                         
                            enabledBorder: UnderlineInputBorder(
         borderSide: BorderSide(
@@ -200,11 +223,17 @@ class _SignupPageState extends State<SignupPage> {
                  SizedBox(
                   width: 310,
                    child: TextField(
+                    onTap: ()=>{
+                      setState(() {
+                        emailerror = "enter a valid email "; 
+                      },)
+                     
+                    },
                     cursorColor: Colors.black,
                                  controller: _emailController,
                                  decoration: InputDecoration(
                                    labelText: 'Email',
-                                   errorText: _isEmailValid ? null : 'Enter a valid email address',
+                                   errorText:  _isEmailValid ?  null : emailerror,
                                    enabledBorder: UnderlineInputBorder(
         borderSide: BorderSide(
           color: Colors.black, // Set the color of the enabled bottom border
@@ -241,23 +270,28 @@ class _SignupPageState extends State<SignupPage> {
                SizedBox(
                 width: 310,
                  child: TextField(
+                  onTap: ()=> {
+                      setState(() {
+                        passworderror1 = "8 char plus niber and special char";
+                      },)
+                  },
                                controller: _passwordController,
-                               obscureText:visibleIcon ? true : false,
+                               obscureText:visibleIcon1 ? true : false,
                                decoration: InputDecoration(
                   labelText: 'Password',
-                  errorText: _isPasswordValid ? null : '8 charachter including number and speacial char',
+                  errorText: _isPasswordValid ? null : passworderror1,
                                prefixIcon: Icon(Icons.lock)  ,
                                suffixIcon:IconButton(
                                 color: Colors.black,
                              onPressed: () {
                                setState(() {
-                  visibleIcon = !visibleIcon;
-                  passwordIcon = visibleIcon
+                  visibleIcon1 = !visibleIcon1;
+                  passwordIcon1 = visibleIcon1
                       ? const Icon(Icons.visibility_off)
                       : const Icon(Icons.visibility);
                                });
                              },
-                             icon: passwordIcon,
+                             icon: passwordIcon1,
                            ),
 
                            enabledBorder: UnderlineInputBorder(
@@ -297,22 +331,22 @@ class _SignupPageState extends State<SignupPage> {
                  child: TextField(
                   cursorColor: Colors.black,
                                controller: pwdcntr2 ,
-                               obscureText: true,
+                               obscureText: visibleIcon2,
                                decoration: InputDecoration(
                   labelText: 'Password',
-                  errorText:  pwdcntr2.text == _passwordController.text ? null : 'password dont match',
+                  errorText:  pwdcntr2.text == _passwordController.text ? null : passworderror2,
                                prefixIcon: Icon(Icons.lock)  ,
                                suffixIcon:IconButton(
                                 color: Colors.black,
                              onPressed: () {
                                setState(() {
-                  visibleIcon = !visibleIcon;
-                  passwordIcon = visibleIcon
+                  visibleIcon2 = !visibleIcon2;
+                  passwordIcon2 = visibleIcon2
                       ? const Icon(Icons.visibility_off)
                       : const Icon(Icons.visibility);
                                });
                              },
-                             icon: passwordIcon,
+                             icon: passwordIcon2,
                            ),
                            enabledBorder: UnderlineInputBorder(
         borderSide: BorderSide(
@@ -346,31 +380,57 @@ class _SignupPageState extends State<SignupPage> {
                              ),
                ),
                gapH14,
-                  Row(
-                    children: [
-                      SizedBox(width: 12),
-                      CheckboxExample(),
-                      Text(
-                        "I agree with ",
-                        style: TextStyle(color: Colors.red, fontSize: 16),
-                      ),
-                      InkWell(
-                        child: Text(
-                          "Privacy Policy",
-                          style: TextStyle(
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                            fontSize: 16),
-                        ),
-                        onTap: () {
-                          launchPrivacyPolicy();
-                        },
-                      ),
-                    ],
-                  ),
+                  
                   const SizedBox(height: 20),
                   sigin(
-                    onTap: _signup,
+                    onTap:()=>{ 
+                       
+                       if(_emailController.text.isEmpty ){
+                           setState(() => {
+                             
+                             _isEmailValid = false ,
+                             emailerror = "fill in your email ",
+                             _isPasswordValid = false , 
+                             passworderror1 = "fill in a password"
+                            
+
+                           },)
+
+                        
+                             
+                       }, 
+                       if( firstnamecntr.text.isEmpty ){
+                           setState(() => {
+                             _isFirstNameValid = false , 
+                             finrstnameerror = " fill in this"
+                            
+
+                           },)
+
+                        
+                             
+                       },  if(  lastnamecntr.text.isEmpty ){
+                           setState(() => {
+                              _isLastNameValid = false , 
+                             lastnameerror = " fill in this"
+                            
+
+                           },)
+
+                        
+                             
+                       },  if(  _passwordController.text.isEmpty ){
+                           setState(() => {
+                               _isPasswordValid = false , 
+                              passworderror1 = " fill in this"
+                            
+
+                           },)}else{
+                            _registerClient()
+                           }
+                      
+                      }
+,
                     btntext: "Sign in ",
                   ),
                   const SizedBox(height: 25),
@@ -540,7 +600,7 @@ void _validateEmail(String value) {
     print('Confirm Password controller: ${pwdcntr2.text}');
 
     if (_formKey.currentState!.validate()) {
-      Client client = Client(
+      /*User client = User(
         firstName: firstnamecntr.text,
         lastName: lastnamecntr.text,
         email: emailController.text,
@@ -560,7 +620,7 @@ void _validateEmail(String value) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Signup failed')),
         );
-      }
+      }*/
     }
   }
    bool _isStrongPassword(String value) {
@@ -577,4 +637,54 @@ void _validateEmail(String value) {
       _isPasswordValid = _isStrongPassword(value);
     });
   }
+
+ void _registerClient() async {
+  if (_formKey.currentState!.validate()) {
+    Client client = Client(
+      firstName: firstnamecntr.text,
+      lastName: lastnamecntr.text,
+      phoneNumber: _phoneNumberController.text,
+      email: _emailController.text,
+      password: _passwordController.text,
+      username: firstnamecntr.text + lastnamecntr.text,
+    );
+
+    final response = await _apiService.registerClient(client);
+
+    if (response.statusCode == 201) {
+      // Navigate to the new page
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeWrapper(), // Replace NewPage with your actual page widget
+        ),
+      );
+    } else {
+      // Check for specific error message in response body
+      final responseBody = json.decode(response.body);
+      if (responseBody['email'] == 'This email is already in use.') {
+        setState(() {
+          _isEmailValid = false;
+        });
+        // Show a SnackBar with the error message
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Email already in use'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      } else {
+        // Handle other errors if necessary
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Signup failed'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
+  }
+}
+
+   final ApiService _apiService = ApiService();
 }
